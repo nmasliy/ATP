@@ -1,0 +1,133 @@
+.categories {
+  padding: 70px 0 60px;
+
+  &__head {
+    @include grid(2, 40px);
+
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    position: relative;
+    border-radius: 7px;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      border-radius: 7px;
+      background-color: $white-color;
+      inset: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      border-radius: 7px;
+      background: linear-gradient(113.96deg, #ce0005 0%, #8d0106 100%);
+      opacity: 0;
+      transition: opacity $transition;
+      inset: 0;
+    }
+
+    @include hover {
+      color: $white-color;
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__item-inner {
+    position: relative;
+    z-index: 2;
+    display: block;
+    padding: 20px;
+    height: 240px;
+  }
+
+  &__name {
+    width: min-content;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.25;
+    text-transform: uppercase;
+    transition: color $transition;
+
+    &--lg {
+      width: auto;
+      max-width: 396px;
+    }
+  }
+
+  &__list {
+    @include grid(3, 40px);
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .categories {
+    &__name {
+      font-size: 20px;
+
+      &--lg {
+        max-width: 340px;
+      }
+    }
+
+    &__list {
+      gap: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .categories {
+    &__list {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    &__name {
+      font-size: 18px;
+
+      &--lg {
+        max-width: 260px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .categories {
+    &__head {
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    &__info {
+      margin-bottom: 32px;
+    }
+
+    &__item {
+      @include mb(16px);
+    }
+
+    &__list {
+      display: block;
+    }
+  }
+}

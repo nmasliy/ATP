@@ -1,0 +1,14 @@
+{% extends "../templates/layouts/layout.njk" %}
+
+{% block head %}
+<script src="https://api-maps.yandex.ru/2.1/?apikey=9ab26e0c-32ac-4011-8bb4-12cd8f01c0a5&lang=ru_RU"
+  type="text/javascript"></script>
+{% endblock head %}
+
+{% block content %}
+{% include "../templates/sections/hero.njk" %}
+{% include "../templates/sections/categories.njk" %}
+{% include "../templates/sections/products-slider.njk" %}
+{% include "../templates/sections/about.njk" %}
+{% include "../templates/sections/contacts.njk" %}
+{% endblock content %}

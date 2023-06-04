@@ -1,0 +1,54 @@
+.breadcrumbs {
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: $grey-color;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  li {
+    @include mr(10px);
+
+    flex-shrink: 0;
+
+    a {
+      position: relative;
+      padding-left: 15px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        background-color: $primary-color;
+        transform: translateY(-50%);
+      }
+
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+
+    &:first-child {
+      a {
+        padding-left: 0;
+
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .breadcrumbs {
+    font-size: 12px;
+  }
+}

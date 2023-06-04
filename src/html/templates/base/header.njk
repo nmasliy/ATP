@@ -1,0 +1,52 @@
+<header class="header">
+  <div class="header__wrapper">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-inner">
+          <div class="header__city">Владивосток</div>
+          <nav class="header__nav">
+            {% include "../common/nav.njk" %}
+          </nav>
+          <div class="header__contacts">
+            <a class="header__phone" href="tel:+79141718208">+7 914 171 82 08</a>
+            <a class="header__whatsapp" href="#"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__body">
+      <div class="container">
+        <div class="header__body-inner">
+          <div class="header__logo">
+            <a href="./">
+              <img src="img/logo.png" width="150" height="75" alt="Логотип">
+            </a>
+          </div>
+          <div class="header__body-items">
+            <a class="header__catalog" href="catalog.html">Каталог</a>
+            <form class="header__form" action="#">
+              <div class="header__search">
+                <input type="search" class="header__search-input form-input"
+                  placeholder="Поиск по названию или по коду детали">
+                <button class="header__search-btn"></button>
+              </div>
+            </form>
+            <div class="header__icons">
+              <a class="header__icon icon-profile" href="#">Мой кабинет</a>
+              <a class="header__icon icon-wishlist" href="#">Избранное <span>8</span></a>
+              <a class="header__icon icon-cart" href="#">Корзина <span>4</span></a>
+            </div>
+          </div>
+          <button class="burger">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="burger-menu">
+  </div>
+
+  <div class="menu-overlay"></div>
+</header>

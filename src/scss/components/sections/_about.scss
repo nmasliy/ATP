@@ -1,0 +1,68 @@
+.about {
+  position: relative;
+  color: $white-color;
+  background-position: right;
+  background-size: 1080px;
+  background-repeat: no-repeat;
+  background-color: $dark-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1080px;
+    background: linear-gradient(90deg, #151925 0%, rgba(21, 25, 37, 37%) 50%);
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0 105px;
+    min-height: 540px;
+    max-width: 760px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: $white-color;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+
+    p {
+      @include mb(10px);
+    }
+
+    strong,
+    b {
+      font-weight: 700;
+    }
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 330px));
+    gap: 10px 20px;
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .about {
+    background-size: cover;
+
+    &::before {
+      width: 100%;
+      background: $dark-color;
+      opacity: 0.8;
+    }
+
+    &__inner {
+      padding: 70px 0;
+    }
+  }
+}

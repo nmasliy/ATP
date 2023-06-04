@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>ATP</title>
+<link rel="stylesheet" href="css/vendor.css">
+<link rel="stylesheet" href="css/main.css">
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=9ab26e0c-32ac-4011-8bb4-12cd8f01c0a5&lang=ru_RU"
+  type="text/javascript"></script>
+
+</head>
+
+<body>
+  <div class="page-wrapper">
+
+    <header class="header">
+  <div class="header__wrapper">
+    <div class="header__top">
+      <div class="container">
+        <div class="header__top-inner">
+          <div class="header__city">Владивосток</div>
+          <nav class="header__nav">
+            <ul>
+  <li><a href="#">О магазине</a></li>
+  <li><a href="#">Доставка и оплата </a></li>
+  <li><a href="#">Акции и скидки</a></li>
+  <li><a href="#">Сертификаты</a></li>
+  <li><a href="#">Контакты</a></li>
+</ul>
+
+          </nav>
+          <div class="header__contacts">
+            <a class="header__phone" href="tel:+79141718208">+7 914 171-82-08</a>
+            <a class="header__whatsapp" href="#"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header__body">
+      <div class="container">
+        <div class="header__body-inner">
+          <div class="header__logo">
+            <a href="./">
+              <img src="img/logo.png" width="150" height="75" alt="Логотип">
+            </a>
+          </div>
+          <div class="header__body-items">
+            <a class="header__catalog" href="catalog.html">Каталог</a>
+            <form class="header__form" action="#">
+              <div class="header__search">
+                <input type="search" class="header__search-input form-input"
+                  placeholder="Поиск по названию или по коду детали">
+                <button class="header__search-btn"></button>
+              </div>
+            </form>
+            <div class="header__icons">
+              <a class="header__icon icon-profile" href="#">Мой кабинет</a>
+              <a class="header__icon icon-wishlist" href="#">Избранное <span>8</span></a>
+              <a class="header__icon icon-cart" href="#">Корзина <span>4</span></a>
+            </div>
+          </div>
+          <button class="burger">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="burger-menu">
+  </div>
+
+  <div class="menu-overlay"></div>
+</header>
+
+    <main class="main">
+
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__slider slider">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="hero__slide swiper-slide" style="background-image: url('img/hero-1.jpg');">
+            <div class="container">
+              <div class="hero__slide-inner">
+                <h2 class="hero__title">Подарочный
+                  сертификат</h2>
+                <div class="hero__subtitle">На сумму от 1 000 руб. до 10 000 руб.</div>
+                <a class="hero__btn btn-arrow" href="#"><span>Подробнее</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide swiper-slide" style="background-image: url('img/hero-2.jpg');">
+            <div class="container">
+              <div class="hero__slide-inner">
+                <h2 class="hero__title">Подарочный
+                  сертификат</h2>
+                <div class="hero__subtitle">На сумму от 1 000 руб. до 10 000 руб.</div>
+                <a class="hero__btn btn-arrow" href="#"><span>Подробнее</span></a>
+              </div>
+            </div>
+          </div>
+          <div class="hero__slide swiper-slide" style="background-image: url('img/hero-3.jpg');">
+            <div class="container">
+              <div class="hero__slide-inner">
+                <h2 class="hero__title">Подарочный
+                  сертификат</h2>
+                <div class="hero__subtitle">На сумму от 1 000 руб. до 10 000 руб.</div>
+                <a class="hero__btn btn-arrow" href="#"><span>Подробнее</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="slider__nav">
+          <div class="slider__button-prev"></div>
+          <div class="slider__button-next"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="categories">
+  <div class="container">
+    <div class="categories__inner">
+      <div class="categories__head">
+        <div class="categories__info">
+          <h2 class="categories__title title">Автотовары</h2>
+          <div class="categories__text">
+            <p>В нашем интернет-магазине представлен большой ассортимент запчастей для тюнинга культовых японских
+              автомобилей Toyota, Subaru, Nissan, Honda, Mazda и др.</p>
+          </div>
+          <a class="categories__btn btn-outline-arrow" href="#"><span>пЕРЕЙТИ В ОБЩИЙ КАТАЛОГ</span></a>
+        </div>
+        <div class="categories__item" style="background-image: url('img/categories-1.png');">
+          <a class="categories__item-inner" href="#">
+            <h4 class="categories__name categories__name--lg">Аксессуары, брелки, сувениры, одежда</h4>
+          </a>
+        </div>
+      </div>
+      <ul class="categories__list">
+        <li class="categories__item" style="background-image: url('img/categories-2.png');">
+          <a class="categories__item-inner" href="#">
+            <h4 class="categories__name">Система охлаждения</h4>
+          </a>
+        </li>
+        <li class="categories__item" style="background-image: url('img/categories-3.png');">
+          <a class="categories__item-inner" href="#">
+            <h4 class="categories__name">выпускная система</h4>
+          </a>
+        </li>
+        <li class="categories__item" style="background-image: url('img/categories-4.png');">
+          <a class="categories__item-inner" href="#">
+            <h4 class="categories__name">Впускная система</h4>
+          </a>
+        </li>
+        <li class="categories__item" style="background-image: url('img/categories-5.png');">
+          <a class="categories__item-inner" href="#">
+            <h4 class="categories__name">Комплектующие двигателя </h4>
+          </a>
+        </li>
+        <li class="categories__item" style="background-image: url('img/categories-6.png');">
+          <a class="categories__item-inner" href="#">
+            <h4 class="categories__name">Турбины и комплектующие</h4>
+          </a>
+        </li>
+        <li class="categories__item" style="background-image: url('img/categories-7.png');">
+          <a class="categories__item-inner" href="#">
+            <h4 class="categories__name">Тормозная система и колеса</h4>
+          </a>
+        </li>
+        <li class="categories__item" style="background-image: url('img/categories-8.png');">
+          <a class="categories__item-inner" href="#">
+            <h4 class="categories__name">Автохимия и масла</h4>
+          </a>
+        </li>
+        <li class="categories__item" style="background-image: url('img/categories-9.png');">
+          <a class="categories__item-inner" href="#">
+            <h4 class="categories__name">Электроника
+              и датчики</h4>
+          </a>
+        </li>
+        <li class="categories__item" style="background-image: url('img/categories-10.png');">
+          <a class="categories__item-inner" href="#">
+            <h4 class="categories__name">Подвеска и трансмиссия</h4>
+          </a>
+        </li>
+        <li class="categories__item" style="background-image: url('img/categories-11.png');">
+          <a class="categories__item-inner" href="#">
+            <h4 class="categories__name">Экстерьер</h4>
+          </a>
+        </li>
+        <li class="categories__item" style="background-image: url('img/categories-12.png');">
+          <a class="categories__item-inner" href="#">
+            <h4 class="categories__name">Интерьер</h4>
+          </a>
+        </li>
+        <li class="categories__item" style="background-image: url('img/categories-13.png');">
+          <a class="categories__item-inner" href="#">
+            <h4 class="categories__name">Шланги
+              и хомуты</h4>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="products-slider">
+  <div class="container">
+    <div class="products-slider__inner slider">
+      <div class="products-slider__head">
+        <h3 class="products-slider__title title">Новинки</h3>
+        <div class="slider__nav">
+          <div class="slider__button-prev"></div>
+          <div class="slider__button-next"></div>
+        </div>
+      </div>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/products-slider-1.jpg" width="260" height="200" alt="">
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title" href="#">Стойки койловеры Subaru Forester 2009-2013 SH5 SH9</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">28 500 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/products-slider-2.jpg" width="260" height="200" alt="">
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title" href="#">NEW
+                  ADDCO — Алюминиевый стакан под спортивный руль — Mitsubishi/Subaru</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">13 400 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/products-slider-3.jpg" width="260" height="200" alt="">
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title" href="#">Стойки койловеры Subaru Forester 2009-2013 SH5 SH9</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">28 500 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/products-slider-4.jpg" width="260" height="200" alt="">
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title" href="#">Вентилятор радиатора, маслокулера — 10 дюймов 80W</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">1 400 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" style="background-image: url('img/about-bg.png');">
+  <div class="container">
+    <div class="about__inner">
+      <h3 class="about__title title">Магазин автотюнинга ATP</h3>
+      <div class="about__text">
+        <p> Auto Tuning Parts — название, говорящее за себя, — это компания, специализирующаяся на товарах для
+          автоспорта и
+          тюнинга большинства автомобилей как японского, так и европейского рынка.</p>
+        <p>Молодая, но конкурентноспособная компания ATP находится на рынке с 2015 года. За это время мы открыли <b>4
+            магазина
+            по всей России: в Москве, Владивостоке, Хабаровске и Благовещенске.</b></p>
+        <p>ATP помогает автолюбителям обеспечивать тюнингом свое авто по доступным ценам, при этом сохраняя свое
+          качество.</p>
+      </div>
+      <div class="about__row">
+        <ul class="about__list check-list">
+          <li>Магазины в 4 городах</li>
+          <li>Большой ассортимент</li>
+          <li>Доступные цены</li>
+        </ul>
+        <ul class="about__list check-list">
+          <li>Система лояльности</li>
+          <li>Сертификаты</li>
+          <li>Помощь в подборе комплектующих</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contacts">
+  <div class="contacts__inner">
+    <div class="contacts__content">
+      <h3 class="contacts__title title">Наши магазины</h3>
+      <div class="contacts__tabs-wrapper">
+        <ul class="contacts__tabs">
+          <li class="is-active" tabindex="0" role="button" data-tabs="1" data-coords="[56.234470, 43.966056]"
+            data-title="ул. Выселковая, 30">
+            Владивосток</li>
+          <li tabindex="0" role="button" data-tabs="2" data-coords="[48.480229, 135.071917]"
+            data-title="где-то в Хабаровске">Хабаровск</li>
+          <li tabindex="0" role="button" data-tabs="3" data-coords="[50.257456, 127.534611]"
+            data-title="где-то в Благовещенске">Благовещенск</li>
+          <li tabindex="0" role="button" data-tabs="4" data-coords="[55.755864, 37.617698]"
+            data-title="где-то в Москве">
+            Москва</li>
+        </ul>
+      </div>
+      <div class="contacts__tabs-content">
+        <div class="contacts__info is-active" data-tabs="1">
+          <div class="contacts__info-title">Менеджер по работе с интернет заказами atp-shop.ru</div>
+          <p><a href="tel:+79141718208">+7 914 171-82-08</a></p>
+          <div class="contacts__info-title">Магазин-склад в г. Владивосток</div>
+          <p>ул. Выселковая, 30</p>
+          <p><a href="tel:+79025556999">+7 902 555-69-99</a></p>
+          <div class="contacts__info-title">Магазин работает</div>
+          <p>ПН-ПТ 9:00–19:00</p>
+          <p>СБ: 10:00–17:00</p>
+          <p>ВС: 11:00–17:00</p>
+        </div>
+        <div class="contacts__info" data-tabs="2">
+          <div class="contacts__info-title">Менеджер по работе с интернет заказами atp-shop.ru</div>
+          <p><a href="tel:+79141718208">+7 914 171-82-08</a></p>
+          <div class="contacts__info-title">Магазин-склад в г. Хабаровск</div>
+          <p>ул. Выселковая, 30</p>
+          <p><a href="tel:+79025556999">+7 902 555-69-99</a></p>
+          <div class="contacts__info-title">Магазин работает</div>
+          <p>ПН-ПТ 9:00–19:00</p>
+          <p>СБ: 10:00–17:00</p>
+          <p>ВС: 11:00–17:00</p>
+        </div>
+        <div class="contacts__info" data-tabs="3">
+          <div class="contacts__info-title">Менеджер по работе с интернет заказами atp-shop.ru</div>
+          <p><a href="tel:+79141718208">+7 914 171-82-08</a></p>
+          <div class="contacts__info-title">Магазин-склад в г. Благовещенск</div>
+          <p>ул. Выселковая, 30</p>
+          <p><a href="tel:+79025556999">+7 902 555-69-99</a></p>
+          <div class="contacts__info-title">Магазин работает</div>
+          <p>ПН-ПТ 9:00–19:00</p>
+          <p>СБ: 10:00–17:00</p>
+          <p>ВС: 11:00–17:00</p>
+        </div>
+        <div class="contacts__info" data-tabs="4">
+          <div class="contacts__info-title">Менеджер по работе с интернет заказами atp-shop.ru</div>
+          <p><a href="tel:+79141718208">+7 914 171-82-08</a></p>
+          <div class="contacts__info-title">Магазин-склад в г. Москва</div>
+          <p>ул. Выселковая, 30</p>
+          <p><a href="tel:+79025556999">+7 902 555-69-99</a></p>
+          <div class="contacts__info-title">Магазин работает</div>
+          <p>ПН-ПТ 9:00–19:00</p>
+          <p>СБ: 10:00–17:00</p>
+          <p>ВС: 11:00–17:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="contacts__map map" id="contacts-map"></div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="footer__main">
+    <div class="container">
+      <div class="footer__main-inner">
+        <div class="footer__col">
+          <ul class="footer__list">
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Акции и скидки </a></li>
+            <li><a href="#">О магазине</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Гарантия и возврат </a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <ul class="footer__list">
+            <li><a href="#">Подарочные сертификаты</a></li>
+            <li><a href="#">Новости и события</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+          <div class="footer__payments">
+            <p>Мы принимаем</p>
+            <ul>
+              <li><img src="img/mir-logo.svg" alt="Логотип МИР"></li>
+              <li><img src="img/visa-logo.svg" alt="Логотип Visa"></li>
+              <li><img src="img/mastercard-logo.svg" alt="Логотип Mastercard"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__title">Подписка на рассылку</div>
+          <form class="footer__form" action="#">
+            <div class="footer__form-field">
+              <input class="footer__input form-input" type="email" placeholder="Введите ваш email">
+              <button class="footer__btn btn">Подписаться</button>
+            </div>
+            <p>Подписываясь на рассылку, я даю согласие на обработку персональных данных и на получение новостей и
+              рекламных сообщений.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="footer__bottom-inner">
+        <div class="footer__col">
+          <p>© 2015-2023  ОГРНИП 313253621300025</p>
+        </div>
+        <div class="footer__col"><a href="#" target="_blank">Политика конфиденциальности</a></div>
+        <div class="footer__col">
+          <p class="footer__caption">Разработка сайта: AgentFox</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+  <div class="modal modal-call" id="modal-call" aria-hidden="true">
+  <div class="modal__wrapper">
+    <div class="modal__inner">
+      <div class="modal__content">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti, officia omnis vitae quae quidem nostrum
+        aliquid voluptas consectetur laudantium, qui excepturi recusandae dolorem doloribus aperiam ratione eius numquam
+        debitis.
+      </div>
+      <button class="modal__close" data-modal-close>
+        <img src="img/close-icon.svg" width="30" height="30" alt="Close icon">
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

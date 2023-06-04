@@ -1,0 +1,19 @@
+.icon-profile,
+.icon-wishlist,
+.icon-cart {
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.icon-profile {
+  background-image: url("../img/profile-icon.svg");
+  background-size: 18px 20px;
+}
+
+.icon-wishlist {
+  background-image: url("../img/heart-icon.svg");
+}
+
+.icon-cart {
+  background-image: url("../img/cart-icon.svg");
+}

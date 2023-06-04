@@ -1,0 +1,87 @@
+.hero {
+  &__slider {
+    .container {
+      position: relative;
+    }
+
+    .slider {
+      &__nav {
+        position: absolute;
+        right: 0;
+        bottom: 80px;
+        z-index: 3;
+      }
+
+      &__button-prev,
+      &__button-next {
+        box-shadow: 0 0 0 1px  rgba($white-color, 0.25);
+        background-image: url("data:image/svg+xml,%3Csvg width='13' height='22' viewBox='0 0 13 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 1L1.99999 11.1619L12 21' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E%0A");
+      }
+    }
+  }
+
+  &__slide {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__slide-inner {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 70px 0 60px;
+    min-height: 440px;
+    max-width: 630px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.02;
+    text-transform: uppercase;
+    color: $white-color;
+  }
+
+  &__subtitle {
+    color: rgba($white-color, 0.75);
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .hero {
+    &__title {
+      font-size: 48px;
+    }
+
+    &__slide-inner {
+      padding-bottom: 90px;
+    }
+
+    &__slider {
+      .slider__nav {
+        right: 15px;
+        bottom: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    &__slide-inner {
+      max-width: 400px;
+    }
+
+    &__title {
+      font-size: 38px;
+    }
+  }
+}

@@ -1,0 +1,131 @@
+/* stylelint-disable scss/no-global-function-names */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: transparent;
+  border-radius: 5px;
+  padding: 5px 15px;
+  height: 50px;
+  min-width: 160px;
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: $white-color;
+  background: $primary-color;
+  transition: background-color $transition;
+  cursor: pointer;
+
+  &:focus,
+  &:active {
+    color: $primary-color;
+    background-color: $white-color;
+  }
+
+  @include hover {
+    color: $primary-color;
+    background-color: $white-color;
+  }
+}
+
+.btn-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 7px;
+  padding: 5px 15px;
+  height: 50px;
+  min-width: 160px;
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: $white-color;
+  background: $gradient;
+  cursor: pointer;
+
+  span {
+    position: relative;
+    display: inline-block;
+    padding-right: 40px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 30px;
+      height: 12px;
+      background: url("../img/btn-arrow-icon.svg") center no-repeat;
+      transform: translateY(-50%);
+      transition: transform $transition;
+    }
+  }
+
+  &:focus,
+  &:active {
+    span::after {
+      transform: translateY(-50%) translateX(-2px);
+    }
+  }
+
+  @include hover {
+    span::after {
+      transform: translateY(-50%) translateX(-2px);
+    }
+  }
+}
+
+.btn-outline-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba($primary-color, 0.25);
+  border-radius: 7px;
+  padding: 5px 15px;
+  height: 50px;
+  min-width: 160px;
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: $primary-color;
+  background: transparent;
+  cursor: pointer;
+
+  span {
+    position: relative;
+    display: inline-block;
+    padding-right: 40px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 30px;
+      height: 12px;
+      background: url("../img/btn-arrow-red-icon.svg") center no-repeat;
+      transform: translateY(-50%);
+      transition: transform $transition;
+    }
+  }
+
+  &:focus,
+  &:active {
+    span::after {
+      transform: translateY(-50%) translateX(-2px);
+    }
+  }
+
+  @include hover {
+    span::after {
+      transform: translateY(-50%) translateX(-2px);
+    }
+  }
+}

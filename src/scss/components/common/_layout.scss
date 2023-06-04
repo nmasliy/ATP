@@ -1,0 +1,47 @@
+.page-wrapper {
+  @include footerToBottom;
+
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+.text-section {
+  p {
+    @include mb(20px);
+  }
+}
+
+.title {
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.04;
+  text-transform: uppercase;
+  color: $dark-color;
+}
+
+.check-list {
+  li {
+    @include mb(10px);
+
+    padding-left: 30px;
+    background: url("../img/check-icon.svg") left center no-repeat;
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 26px;
+  }
+}

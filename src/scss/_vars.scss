@@ -1,0 +1,29 @@
+// root
+:root {
+  --content-width: 1160px;
+  --container-offset: 16px;
+  --container-width: calc(var(--content-width) + var(--container-offset));
+  --window-height: 100%;
+  --header-height: 100px;
+}
+
+// font
+$font-main: "Roboto", sans-serif;
+$font-secondary: "FuturaFuturisC", sans-serif;
+
+// transitions
+$transition: 0.25s ease-in-out;
+$menu-transition: 0.35s ease-in-out;
+
+// breakpoints
+$menu-breakpoint: 1200px;
+
+// colors
+$white-color: #fff;
+$black-color: #000;
+$dark-color: #151925;
+$primary-color: #ce0005;
+$bg-color: #f2eeee;
+$green-color: #29a71a;
+$grey-color: #8e8b8b;
+$gradient: linear-gradient(90deg, #ba000b 0%, #e10000 100%);

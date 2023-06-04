@@ -1,0 +1,40 @@
+.products-slider {
+  padding-bottom: 90px;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-right: 15px;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .products-slider {
+    overflow: hidden;
+
+    &__title {
+      margin-right: 0;
+    }
+
+    .slider__nav {
+      display: none;
+    }
+
+    .swiper {
+      overflow: visible;
+    }
+
+    .swiper-slide {
+      width: 260px;
+    }
+  }
+}

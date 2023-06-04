@@ -1,0 +1,158 @@
+.footer {
+  font-size: 13px;
+  color: $grey-color;
+  background-color: $dark-color;
+
+  a {
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__main {
+    padding: 60px 0 55px;
+  }
+
+  &__bottom {
+    padding: 16px 0;
+  }
+
+  &__main-inner {
+    display: grid;
+    grid-template-columns: 25fr 24fr 56fr;
+    gap: 50px;
+  }
+
+  &__bottom-inner {
+    display: grid;
+    grid-template-columns: 25fr 24fr 56fr;
+    gap: 50px;
+  }
+
+  &__list {
+    font-size: 16px;
+    color: $white-color;
+
+    li {
+      @include mb(10px);
+    }
+  }
+
+  &__payments {
+    padding-top: 15px;
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    li {
+      @include mr(20px);
+    }
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__form {
+    p {
+      max-width: 460px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $white-color;
+  }
+
+  &__form-field {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    border-radius: 7px 0 0 7px;
+  }
+
+  &__caption {
+    text-align: right;
+  }
+
+  &__btn {
+    border-radius: 0 7px 7px 0;
+    min-width: 200px;
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .footer {
+    &__main-inner,
+    &__bottom-inner {
+      gap: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    &__main {
+      padding-bottom: 35px;
+    }
+
+    &__col {
+      @include mb(16px);
+    }
+
+    &__list li {
+      @include mb(16px);
+    }
+
+    &__main-inner {
+      display: block;
+    }
+
+    &__bottom-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: -8px;
+      gap: 0;
+
+      .footer__col {
+        margin: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    &__form-field {
+      display: block;
+    }
+
+    &__input {
+      margin-bottom: 16px;
+      border-radius: 7px;
+    }
+
+    &__btn {
+      border-radius: 7px;
+      width: 100%;
+    }
+  }
+}
