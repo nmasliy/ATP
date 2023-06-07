@@ -1,5 +1,9 @@
 /* stylelint-disable scss/no-global-function-names */
 .btn {
+  @include hover {
+
+  }
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -20,13 +24,7 @@
 
   &:focus,
   &:active {
-    color: $primary-color;
-    background-color: $white-color;
-  }
 
-  @include hover {
-    color: $primary-color;
-    background-color: $white-color;
   }
 }
 

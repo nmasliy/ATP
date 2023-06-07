@@ -1,7 +1,116 @@
 <section class="catalog">
   <div class="container">
     <div class="catalog__inner">
-
+      {% include "./catalog-menu.njk" %}
+      <div class="catalog__content">
+        <h1 class="catalog__title title">V-band фланцы и хомуты</h1>
+        <div class="catalog__filter catalog-filter">
+          <form class="catalog-filter__form" action="#">
+            <div class="catalog-filter__row">
+              <div class="catalog-filter__col">
+                <label class="catalog-filter__select form-select">
+                  <span>Модели</span>
+                  <select>
+                    <option value="1">V-band в сборе быстросъёмный</option>
+                    <option value="2">V-band 2</option>
+                    <option value="3">V-band 3</option>
+                    <option value="4">V-band 4</option>
+                  </select>
+                </label>
+              </div>
+              <div class="catalog-filter__col">
+                <label class="catalog-filter__select form-select">
+                  <span>Диаметр (дюймы)</span>
+                  <select>
+                    <option value="1" checked data-placeholder>Любой</option>
+                    <option value="2">V-band 2</option>
+                    <option value="3">V-band 3</option>
+                    <option value="4">V-band 4</option>
+                  </select>
+                </label>
+              </div>
+              <div class="catalog-filter__col">
+                <label class="catalog-filter__select form-select">
+                  <span>Диаметр (мм)</span>
+                  <select>
+                    <option value="1">100-115 мм</option>
+                    <option value="2">V-band 2</option>
+                    <option value="3">V-band 3</option>
+                    <option value="4">V-band 4</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <div class="catalog-filter__row">
+              <div class="catalog-filter__col">
+                <label class="catalog-filter__select form-select">
+                  <span>Проточка</span>
+                  <select>
+                    <option value="1">Без проточки</option>
+                    <option value="2">V-band 2</option>
+                    <option value="3">V-band 3</option>
+                    <option value="4">V-band 4</option>
+                  </select>
+                </label>
+              </div>
+              <div class="catalog-filter__col">
+                <label class="catalog-filter__select form-select">
+                  <span>Материал</span>
+                  <select>
+                    <option value="1" checked data-placeholder>Выберите материал</option>
+                    <option value="2">V-band 2</option>
+                    <option value="3">V-band 3</option>
+                    <option value="4">V-band 4</option>
+                  </select>
+                </label>
+              </div>
+              <div class="catalog-filter__col">
+                <button class="catalog-filter__btn btn">Показать</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="catalog__body">
+          <div class="catalog__sort">
+            <div class="form-select-transparent">
+              <select>
+                <option value="1">По популярности</option>
+                <option value="2">По рейтингу</option>
+                <option value="3">По цене</option>
+              </select>
+            </div>
+            <div class="form-select-transparent">
+              <select>
+                <option value="1">Все магазины</option>
+                <option value="2">Магазин 2</option>
+                <option value="3">Магазин 3</option>
+              </select>
+            </div>
+            <div class="catalog__icons">
+              <button class="catalog__icon is-active"><img src="img/catalog-type-1.svg" alt="Вид: сетка"></button>
+              <button class="catalog__icon"><img src="img/catalog-type-2.svg" alt="Вид: список"></button>
+            </div>
+          </div>
+          <ul class="catalog__list">
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-1.jpg" width="260" height="200" alt="">
+                <div class="product-card__banner">Скидка</div>
+              </a>
+              <div class="product-card__content">
+                <a class="product-card__title" href="#">Вентилятор радиатора, маслокулера - 10 дюймов 80W</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">1 400 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart"></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>

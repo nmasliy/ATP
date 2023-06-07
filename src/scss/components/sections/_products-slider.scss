@@ -1,6 +1,12 @@
 .products-slider {
   padding-bottom: 90px;
 
+  &__inner {
+    border-radius: 7px;
+    padding: 30px;
+    background-color: $bg-color;
+  }
+
   &__head {
     display: flex;
     align-items: center;

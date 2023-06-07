@@ -82,13 +82,15 @@
 
   &__whatsapp {
     flex-shrink: 0;
-    width: 24px;
-    height: 24px;
-    background: url("../img/whatsapp-icon.svg") center no-repeat;
-    transition: transform $transition;
+    padding-left: 21px;
+    min-height: 16px;
+    font-weight: 500;
+    font-size: 13px;
+    color: $green-color;
+    background: url("../img/whatsapp-icon.svg") left center / 16px no-repeat;
 
     @include hover {
-      transform: scale(1.1);
+      text-decoration: underline;
     }
   }
 

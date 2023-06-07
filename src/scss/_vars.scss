@@ -2,7 +2,7 @@
 :root {
   --content-width: 1160px;
   --container-offset: 16px;
-  --container-width: calc(var(--content-width) + var(--container-offset));
+  --container-width: calc(var(--content-width) + calc(var(--container-offset) * 2));
   --window-height: 100%;
   --header-height: 100px;
 }
@@ -23,7 +23,7 @@ $white-color: #fff;
 $black-color: #000;
 $dark-color: #151925;
 $primary-color: #ce0005;
-$bg-color: #f2eeee;
+$bg-color: #f5f5f5;
 $green-color: #29a71a;
 $grey-color: #8e8b8b;
 $gradient: linear-gradient(90deg, #ba000b 0%, #e10000 100%);
