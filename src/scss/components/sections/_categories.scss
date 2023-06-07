@@ -1,5 +1,5 @@
 .categories {
-  padding: 70px 0 60px;
+  padding: 70px 0 20px;
 
   &__inner {
     border-radius: 7px;
@@ -121,6 +121,13 @@
 
 @media screen and (max-width: 768px) {
   .categories {
+    background-color: $bg-color;
+
+    &__inner {
+      border-radius: 0;
+      padding: 0;
+    }
+
     &__head {
       display: block;
       margin-bottom: 16px;

@@ -62,7 +62,7 @@ const heroSwiper = new Swiper('.hero__slider .swiper', {
 
 const productsSwiper = new Swiper('.products-slider__inner .swiper', {
   slidesPerView: 4,
-  spaceBetween: 40,
+  spaceBetween: 20,
   loop: true,
   navigation: {
     nextEl: '.products-slider__inner .slider__button-next',
@@ -72,16 +72,13 @@ const productsSwiper = new Swiper('.products-slider__inner .swiper', {
     // when window width is >= 320px
     320: {
       slidesPerView: 'auto',
-      spaceBetween: 20
     },
     768: {
       slidesPerView: 3,
-      spaceBetween: 20
     },
     // when window width is >= 1201
     1201: {
       slidesPerView: 4,
-      spaceBetween: 40,
     }
   }
 })
