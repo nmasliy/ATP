@@ -72,13 +72,22 @@
   <div class="burger-menu">
   </div>
 
-  <div class="menu-overlay"></div>
+  <div class="menu-overlay overlay"></div>
 </header>
 
     <div class="main-content">
 
 <section class="catalog">
   <div class="container">
+    <div class="breadcrumbs">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Выпускная система</a></li>
+        <li><a href="#">Фланцы, прокладки</a></li>
+        <li><a href="#">V-band фланцы и хомуты</a></li>
+      </ul>
+    </div>
     <div class="catalog__inner">
       <aside class="catalog__menu catalog-menu">
   <ul class="catalog-menu__list menu">
@@ -98,7 +107,7 @@
         <li><a href="#">Впускная система 3</a></li>
       </ul>
     </li>
-    <li class="submenu">
+    <li class="submenu is-active">
       <a href="#">Выпускная система</a>
       <ul>
         <li><a href="#">Аксессуары</a></li>
@@ -144,7 +153,7 @@
             <li><a href="#">Отводы</a></li>
           </ul>
         </li>
-        <li class="submenu">
+        <li class="submenu is-active">
           <a href="#">Фланцы, прокладки</a>
           <ul>
             <li class="is-current"><a href="#">V-band фланцы и хомуты</a></li>
@@ -251,7 +260,9 @@
       </ul>
     </li>
   </ul>
+  <button class="catalog__close"></button>
 </aside>
+<div class="catalog-overlay overlay"></div>
 
       <div class="catalog__content">
         <h1 class="catalog__title title">V-band фланцы и хомуты</h1>
@@ -273,7 +284,7 @@
                 <label class="catalog-filter__select form-select">
                   <span>Диаметр (дюймы)</span>
                   <select>
-                    <option value="1" checked data-placeholder>Любой</option>
+                    <option value="1" checked data-placeholder="true">Любой</option>
                     <option value="2">V-band 2</option>
                     <option value="3">V-band 3</option>
                     <option value="4">V-band 4</option>
@@ -308,7 +319,7 @@
                 <label class="catalog-filter__select form-select">
                   <span>Материал</span>
                   <select>
-                    <option value="1" checked data-placeholder>Выберите материал</option>
+                    <option value="1" checked data-placeholder="true">Выберите материал</option>
                     <option value="2">V-band 2</option>
                     <option value="3">V-band 3</option>
                     <option value="4">V-band 4</option>
@@ -319,18 +330,21 @@
                 <button class="catalog-filter__btn btn">Показать</button>
               </div>
             </div>
+            <div class="catalog-filter__clear">
+              <button class="catalog-filter__reset" type="reset">Очистить все фильтры</button>
+            </div>
           </form>
         </div>
         <div class="catalog__body">
           <div class="catalog__sort">
-            <div class="form-select-transparent">
+            <div class="catalog__select form-select-transparent">
               <select>
                 <option value="1">По популярности</option>
                 <option value="2">По рейтингу</option>
                 <option value="3">По цене</option>
               </select>
             </div>
-            <div class="form-select-transparent">
+            <div class="catalog__select form-select-transparent">
               <select>
                 <option value="1">Все магазины</option>
                 <option value="2">Магазин 2</option>
@@ -346,12 +360,17 @@
             <li class="product-card">
               <a class="product-card__img" href="#">
                 <img src="img/catalog-1.jpg" width="260" height="200" alt="">
-                <div class="product-card__banner">Скидка</div>
+                <div class="product-card__banner product-card__banner--red">Скидка</div>
               </a>
               <div class="product-card__content">
-                <a class="product-card__title" href="#">Вентилятор радиатора, маслокулера — 10 дюймов 80W</a>
+                <div class="product-card__stock">В наличии в другом городе</div>
+                <a class="product-card__title" href="#">V-band хомут с фланцами быстросъемный 4» (102 мм) с проточкой,
+                  нержа</a>
                 <div class="product-card__footer">
-                  <div class="product-card__price">1 400 ₽</div>
+                  <div class="product-card__prices">
+                    <div class="product-card__price-old">2 200 ₽</div>
+                    <div class="product-card__price-new">1 900 ₽</div>
+                  </div>
                   <div class="product-card__icons">
                     <button class="product-card__icon icon-wishlist"></button>
                     <button class="product-card__icon icon-cart"></button>
@@ -359,7 +378,214 @@
                 </div>
               </div>
             </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+                <div class="product-card__banner">Новинка</div>
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock">В наличии во Владивостоке</div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2» — 51 мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart is-active"></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock product-card__stock--no">Нет в наличии</div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2» — 51 мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart"></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock product-card__stock--no">Нет в наличии</div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2» — 51 мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart"></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+                <div class="product-card__banner">Новинка</div>
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock">В наличии во Владивостоке</div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2» — 51 мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart is-active"></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+                <div class="product-card__banner">Новинка</div>
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock">В наличии во Владивостоке</div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2» — 51 мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart is-active"></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+                <div class="product-card__banner">Новинка</div>
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock">В наличии во Владивостоке</div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2» — 51 мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart is-active"></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock product-card__stock--no">Нет в наличии</div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2» — 51 мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart"></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock product-card__stock--no">Нет в наличии</div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2» — 51 мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart"></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock product-card__stock--no">Нет в наличии</div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2» — 51 мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart"></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+                <div class="product-card__banner">Новинка</div>
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock">В наличии во Владивостоке</div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2» — 51 мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart is-active"></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+                <div class="product-card__banner">Новинка</div>
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock">В наличии во Владивостоке</div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2» — 51 мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart is-active"></button>
+                  </div>
+                </div>
+              </div>
+            </li>
           </ul>
+          <div class="pagination">
+  <ul>
+    <li class="pagination__arrow pagination__arrow--prev"><a href="#"></a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li class="is-active"><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li class="pagination__dots"><span>…</span></li>
+    <li><a href="#">48</a></li>
+    <li class="pagination__arrow pagination__arrow--next"><a href="#"></a></li>
+  </ul>
+</div>
+
+        </div>
+        <div class="catalog__footer">
+          <p>Описание раздела. В нашем интернет-магазине представлен большой ассортимент запчастей для тюнинга культовых
+            японских автомобилей Toyota, Subaru, Nissan, Honda, Mazda и др. Описание категории. Страницы дочерних
+            категорий каталога должны содержать превью карточек товаров выбранной категории, описание категории, а также
+            другие элементы управления. Некоторые товары в каталоге могут находиться в нескольких категориях.
+          </p>
+          <p>Описание категории. Страницы дочерних категорий каталога должны содержать превью карточек товаров выбранной
+            категории, описание категории, а также другие элементы управления. Некоторые товары в каталоге могут
+            находиться в нескольких категориях. </p>
         </div>
       </div>
     </div>

@@ -86,6 +86,33 @@
     white-space: nowrap;
   }
 
+  &__prices {
+    font-family: $font-secondary;
+    font-weight: 700;
+    line-height: 1.15;
+    text-transform: uppercase;
+  }
+
+  &__price-old {
+    position: relative;
+    display: inline-block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      height: 2px;
+      background-color: $primary-color;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__price-new {
+    font-size: 20px;
+    color: $primary-color;
+  }
+
   &__icons {
     display: flex;
   }
@@ -94,17 +121,22 @@
     @include mr(10px);
 
     display: inline-block;
-    border: 1px solid #d9d5d5;
+    border: 1px solid transparent;
     border-radius: 50%;
     padding: 0;
     width: 50px;
     height: 50px;
-    background-color: transparent;
-    transition: background-color $transition;
+    background-color: $bg-color;
+    transition: border-color $transition;
     cursor: pointer;
 
+    &.is-active {
+      background: url("../img/check-icon-white.svg") center / 22px no-repeat;
+      background-color: $green-color;
+    }
+
     @include hover {
-      background-color: #ebffe9;
+      border-color: $green-color;
     }
   }
 }

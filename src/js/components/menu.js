@@ -17,7 +17,7 @@ const menu = new Menu({
 
 moveElementOnBreakpoint(
   '.header__body-items',
-  { fromSelector: '.header__logo', fromPosition: 'afterend' },
+  { fromSelector: '.header__catalog', fromPosition: 'afterend' },
   { toSelector: '.burger-menu', toPosition: 'beforeend' },
   1200
 );
@@ -28,3 +28,4 @@ moveElementOnBreakpoint(
   1200
 );
 
+export default menu;

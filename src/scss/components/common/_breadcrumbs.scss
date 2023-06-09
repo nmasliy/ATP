@@ -1,7 +1,6 @@
 .breadcrumbs {
-  padding-bottom: 10px;
-  font-weight: 500;
-  font-size: 14px;
+  padding-bottom: 23px;
+  font-size: 13px;
   color: $grey-color;
 
   ul {
@@ -10,23 +9,21 @@
   }
 
   li {
-    @include mr(10px);
-
     flex-shrink: 0;
+    margin-right: 5px;
 
     a {
       position: relative;
-      padding-left: 15px;
+      padding-right: 30px;
 
       &::before {
-        content: "";
+        content: "→";
         position: absolute;
-        left: 0;
+        right: 0;
         top: 50%;
-        border-radius: 50%;
-        width: 5px;
-        height: 5px;
-        background-color: $primary-color;
+        width: 20px;
+        height: 20px;
+        color: $grey-color;
         transform: translateY(-50%);
       }
 
@@ -35,20 +32,15 @@
       }
     }
 
-    &:first-child {
+    &:last-child {
       a {
-        padding-left: 0;
+        padding-right: 0;
+        color: $black-color;
 
         &::before {
           display: none;
         }
       }
     }
-  }
-}
-
-@media screen and (max-width: 580px) {
-  .breadcrumbs {
-    font-size: 12px;
   }
 }

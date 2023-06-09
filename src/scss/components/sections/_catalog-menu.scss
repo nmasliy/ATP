@@ -112,7 +112,7 @@
 
     &.is-active {
       > a {
-        color: $primary-color;
+        // color: $primary-color;
 
         &::after {
           background-image: url("data:image/svg+xml,%3Csvg width='4' height='8' viewBox='0 0 4 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 4L0 0V8L4 4Z' fill='%23CE0005'/%3E%3C/svg%3E%0A");
