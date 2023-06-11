@@ -1,3 +1,5 @@
+{% import "../macro/macro.njk" as macro %}
+
 <!DOCTYPE html>
 <html lang="ru">
 
@@ -12,9 +14,9 @@
     {% block header %}
     {% include "../base/header.njk" %}
     {% endblock %}
-    <main class="main">
+    <div class="main-content {{ 'page-offset-b' if pageOffset == true }}">
       {% block content %}{% endblock content %}
-    </main>
+    </div>
     {% block footer %}
     {% include "../base/footer.njk" %}
     {% endblock footer %}

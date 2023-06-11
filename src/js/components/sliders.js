@@ -60,45 +60,42 @@ const heroSwiper = new Swiper('.hero__slider .swiper', {
   },
 })
 
-const productsSwiper = new Swiper('.products-slider__inner .swiper', {
-  slidesPerView: 4,
-  spaceBetween: 20,
-  loop: true,
-  navigation: {
-    nextEl: '.products-slider__inner .slider__button-next',
-    prevEl: '.products-slider__inner .slider__button-prev',
-  },
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 'auto',
+const productsSliders = document.querySelectorAll('.products-slider');
+
+productsSliders.forEach(el => {
+  const productsSwiper = new Swiper(el.querySelector('.swiper'), {
+    slidesPerView: 4,
+    spaceBetween: 20,
+    loop: true,
+    navigation: {
+      nextEl: el.querySelector('.slider__button-next'),
+      prevEl: el.querySelector('.slider__button-prev'),
     },
-    768: {
-      slidesPerView: 3,
-    },
-    // when window width is >= 1201
-    1201: {
-      slidesPerView: 4,
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 'auto',
+      },
+      768: {
+        slidesPerView: 3,
+      },
+      // when window width is >= 1201
+      1201: {
+        slidesPerView: 4,
+      }
     }
-  }
+  })
 })
 
-// const productThumbs  = new Swiper('.product__thumbs', {
-//   spaceBetween: 20,
-//   slidesPerView: 3
-// })
 
-// const productSwiper = new Swiper('.product__slider', {
-//   spaceBetween: 50,
-//   navigation: {
-//     nextEl: '.product__slider .slider-button-next',
-//     prevEl: '.product__slider .slider-button-prev',
-//   },
-//   pagination: {
-//     el: '.product__slider .slider-pagination',
-//     clickable: true
-//   },
-//   thumbs:{
-//     swiper: productThumbs
-//   }
-// })
+const productThumbs  = new Swiper('.product__thumbs', {
+  spaceBetween: 10,
+  slidesPerView: 5
+})
+
+const productSwiper = new Swiper('.product__slider', {
+  spaceBetween: 50,
+  thumbs:{
+    swiper: productThumbs
+  }
+})

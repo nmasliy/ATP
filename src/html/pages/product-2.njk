@@ -1,0 +1,20 @@
+{% set title = "ATP - карточка товара 2" %}
+{% set pageSlug = "product" %}
+{% set pageOffset = true %}
+{% set catalogMobile = true %}
+
+{% extends "../templates/layouts/layout.njk" %}
+
+{% block content %}
+
+{% include "../templates/sections/product-2.njk" %}
+
+{% set sliderTitle = "Сопутствующие товары" %}
+{% include "../templates/sections/products-slider.njk" %}
+
+{% set sliderTitle = "Вы недавно смотрели" %}
+{% include "../templates/sections/products-slider.njk" %}
+
+{% include "../templates/sections/catalog-menu.njk" %}
+
+{% endblock content %}

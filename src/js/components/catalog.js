@@ -3,6 +3,10 @@ import Menu from '../functions/Menu';
 import { throttle } from '../functions/throttle';
 
 const catalogBtn = document.querySelector('.header__catalog');
+const catalogMenu = document.querySelector('.menu--clickable');
+const catalogHoverItems = document.querySelectorAll('.menu--hover .submenu');
+const catalogOverlay = document.querySelector('.catalog-overlay');
+
 let width = window.innerWidth;
 
 const menu = new Menu({
@@ -17,6 +21,21 @@ const menu = new Menu({
   breakpoint: 1200,
 });
 
+const checkWidth = () => {
+  width = window.innerWidth;
+}
+
+catalogHoverItems.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    catalogOverlay.style.display = 'block';
+    catalogOverlay.classList.add('is-active');
+  })
+  item.addEventListener('mouseleave', () => {
+    catalogOverlay.style.display = '';
+    catalogOverlay.classList.remove('is-active');
+  })
+})
+
 catalogBtn.addEventListener('click', (e) => {
   headerMenu.close();
 
@@ -25,7 +44,7 @@ catalogBtn.addEventListener('click', (e) => {
   }
 });
 
-const catalogMenu = document.querySelector('.catalog-menu');
+window.addEventListener('resize', throttle(checkWidth));
 
 catalogMenu?.addEventListener('click', (e) => {
   const link = e.target.closest('.submenu > a');
@@ -36,9 +55,5 @@ catalogMenu?.addEventListener('click', (e) => {
   }
 });
 
-const checkWidth = () => {
-  width = window.innerWidth;
-}
 
-window.addEventListener('resize', throttle(checkWidth));
 

@@ -1,5 +1,5 @@
 .products-slider {
-  padding-bottom: 70px;
+  padding-bottom: 20px;
 
   &__inner {
     border-radius: 7px;
@@ -20,6 +20,10 @@
 
   .swiper-slide {
     height: auto;
+  }
+
+  &--offset {
+    padding-bottom: 70px;
   }
 }
 

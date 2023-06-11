@@ -7,7 +7,8 @@
     gap: 40px;
   }
 
-  &__content {
+  &__categories {
+    @include grid(2, 40px);
   }
 
   &__title {
@@ -115,6 +116,10 @@
   }
 }
 
+.catalog-overlay {
+  top: 0;
+}
+
 @media screen and (max-width: $menu-breakpoint) {
   .catalog {
     &__inner {
@@ -133,10 +138,10 @@
       background: url("../img/close-icon.svg") center no-repeat;
       cursor: pointer;
     }
-  }
 
-  .catalog-overlay {
-    top: 0;
+    &__categories {
+      gap: 20px;
+    }
   }
 
   .catalog-menu {
@@ -204,6 +209,10 @@
 @media screen and (max-width: 575px) {
   .catalog {
     &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__categories {
       grid-template-columns: 1fr;
     }
 

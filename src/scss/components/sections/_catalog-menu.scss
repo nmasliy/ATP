@@ -1,4 +1,6 @@
 .catalog-menu {
+  position: relative;
+  z-index: 7;
   font-weight: 500;
   font-size: 14px;
 
@@ -6,11 +8,19 @@
     border-radius: 7px;
     background-color: #f5f5f5;
   }
+
+  &--mobile {
+    display: none;
+  }
 }
 
 .menu {
   > li {
     border-bottom: 1px solid #e3e3e3;
+
+    &:last-child {
+      border-bottom: transparent;
+    }
   }
 
   li.is-current {
@@ -110,6 +120,18 @@
       }
     }
 
+    &:first-child {
+      a {
+        border-radius: 7px 0 0;
+      }
+    }
+
+    &:last-child {
+      a {
+        border-radius: 0 0 0 7px;
+      }
+    }
+
     &.is-active {
       > a {
         // color: $primary-color;
@@ -123,7 +145,80 @@
   }
 }
 
+.menu--hover {
+  .submenu {
+    transition: $transition;
+
+    &__title {
+      margin-bottom: 20px;
+      font-family: $font-secondary;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 1.25;
+      text-transform: uppercase;
+    }
+
+    &__content {
+      position: absolute;
+      left: 100%;
+      top: 0;
+      z-index: 10;
+      display: none;
+      border-radius: 0 7px 7px 0;
+      padding: 20px 40px 10px;
+      width: 900px;
+      background: $white-color;
+      background-position: right bottom;
+      background-size: 300px;
+      background-repeat: no-repeat;
+
+      li {
+        border-bottom: 1px solid #e3e3e3;
+        font-weight: 400;
+
+        &:first-child,
+        &:last-child {
+          border-bottom: 1px solid transparent;
+        }
+      }
+
+      ul {
+        @include mr(42px);
+
+        width: 100%;
+        max-width: 258px;
+      }
+
+      a {
+        display: block;
+        padding: 7px 0;
+        transition: color $primary-color;
+
+        @include hover {
+          color: $primary-color;
+        }
+      }
+    }
+
+    &__row {
+      display: flex;
+    }
+
+    @include hover {
+      a {
+        background-color: $white-color;
+      }
+
+      .submenu__content {
+        display: block;
+      }
+    }
+  }
+}
+
 .submenu {
+  position: relative;
+
   > ul {
     display: none;
   }
@@ -132,5 +227,11 @@
     > ul {
       display: block;
     }
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .catalog-menu--mobile {
+    display: block;
   }
 }

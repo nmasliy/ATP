@@ -21,45 +21,41 @@
     margin-bottom: 25px;
   }
 
-  &__item {
-    position: relative;
-    border: 1px solid #e3e3e3;
+  &__list {
+    @include grid(3, 10px);
+  }
+}
+
+.category {
+  position: relative;
+  border: 1px solid #e3e3e3;
+  border-radius: 7px;
+  background-position: right bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: $white-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
     border-radius: 7px;
-    background-position: right;
-    background-size: contain;
-    background-repeat: no-repeat;
     background-color: $white-color;
-
-    &::before {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      border-radius: 7px;
-      background-color: $white-color;
-      inset: 0;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      z-index: -1;
-      border-radius: 7px;
-      background: linear-gradient(113.96deg, #ce0005 0%, #8d0106 100%);
-      opacity: 0;
-      transition: opacity $transition;
-      inset: 0;
-    }
-
-    @include hover {
-      color: $white-color;
-
-      &::after {
-        opacity: 1;
-      }
-    }
+    inset: 0;
   }
 
-  &__item-inner {
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border-radius: 7px;
+    background: linear-gradient(113.96deg, #ce0005 0%, #8d0106 100%);
+    opacity: 0;
+    transition: opacity $transition;
+    inset: 0;
+  }
+
+  &__inner {
     position: relative;
     z-index: 2;
     display: block;
@@ -82,13 +78,17 @@
     }
   }
 
-  &__list {
-    @include grid(3, 10px);
+  @include hover {
+    color: $white-color;
+
+    &::after {
+      opacity: 1;
+    }
   }
 }
 
 @media screen and (max-width: $menu-breakpoint) {
-  .categories {
+  .category {
     &__name {
       font-size: 20px;
 
@@ -96,7 +96,9 @@
         max-width: 340px;
       }
     }
+  }
 
+  .categories {
     &__list {
       gap: 24px;
     }
@@ -104,17 +106,19 @@
 }
 
 @media screen and (max-width: 900px) {
-  .categories {
-    &__list {
-      grid-template-columns: 1fr 1fr;
-    }
-
+  .category {
     &__name {
       font-size: 18px;
 
       &--lg {
         max-width: 260px;
       }
+    }
+  }
+
+  .categories {
+    &__list {
+      grid-template-columns: 1fr 1fr;
     }
   }
 }
@@ -137,7 +141,7 @@
       margin-bottom: 32px;
     }
 
-    &__item {
+    &__list li {
       @include mb(16px);
     }
 

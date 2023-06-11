@@ -1,5 +1,5 @@
 .breadcrumbs {
-  padding-bottom: 23px;
+  padding: 23px 0;
   font-size: 13px;
   color: $grey-color;
 
@@ -41,6 +41,16 @@
           display: none;
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .breadcrumbs {
+    ul {
+      flex-wrap: nowrap;
+      overflow: auto;
+      padding-bottom: 5px;
     }
   }
 }
