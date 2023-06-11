@@ -235,65 +235,21 @@
     }
   }
 
-  &__counter {
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 10px;
-    border: 1px solid #d9d5d5;
-    border-radius: 7px;
-    padding: 10px;
-    width: 100px;
-    height: 50px;
-    background-color: $white-color;
-  }
-
-  &__counter-btn {
-    position: relative;
-    border: none;
-    padding: 0;
-    width: 20px;
-    height: 20px;
-    background: transparent;
-    cursor: pointer;
-
-    &::before {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 13px;
-      height: 2px;
-      background: #8e8b8b;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  &__counter-btn--plus {
-    &::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: 13px;
-      height: 2px;
-      background: #8e8b8b;
-      transform: translate(-50%, -50%) rotate(90deg);
-    }
-  }
-
-  &__counter-value {
-    padding: 0 5px;
-    text-align: center;
-  }
-
   &__btn {
     @include mr(20px);
 
     flex-grow: 1;
     padding: 5px 28px;
-    max-width: 240px;
+    min-width: 160px;
+
+    &--w-auto {
+      flex-grow: 0;
+      max-width: 240px;
+    }
+
+    &--w-half {
+      width: calc(50% - 10px);
+    }
   }
 
   &__wishlist {
@@ -388,7 +344,6 @@
     &__btn {
       @include mr(5px);
 
-      flex-grow: 1;
       margin: 5px;
     }
   }
@@ -422,5 +377,12 @@
         width: auto;
       }
     }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .product__btn {
+    flex-grow: 1;
+    max-width: 100%;
   }
 }

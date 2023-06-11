@@ -1,16 +1,24 @@
-textarea.form-input {
-  min-height: 150px;
-  resize: none;
+.form-item {
+  display: block;
+
+  &__caption {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: $grey-color;
+
+    > span {
+      color: $primary-color;
+    }
+  }
 }
 
 .form-input {
-  border: none;
+  border: 1px solid #d9d9d9;
   border-radius: 7px;
   padding: 15px 20px;
   width: 100%;
-  font-family: $font-main;
-  font-weight: 400;
-  font-size: 16px;
+  font: inherit;
   line-height: 1.25;
   color: $black-color;
   background-color: $white-color;
@@ -21,18 +29,23 @@ textarea.form-input {
   }
 }
 
+textarea.form-input {
+  min-height: 100px;
+  resize: none;
+}
+
 .form-checkbox {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   cursor: pointer;
 
   &__box {
     position: relative;
     display: block;
     flex-shrink: 0;
-    margin-right: 8px;
+    margin-right: 10px;
     border: 1px solid $primary-color;
-    border-radius: 3px;
+    border-radius: 7px;
     width: 20px;
     height: 20px;
     background-color: $white-color;
@@ -43,12 +56,14 @@ textarea.form-input {
       content: "";
       width: 100%;
       height: 100%;
-      background: url("../img/check-icon.svg") center no-repeat;
+      background: url("../img/check-icon-white.svg") center / 13px no-repeat;
       opacity: 0;
     }
   }
 
   &__text {
+    font-size: 13px;
+    color: $grey-color;
     user-select: none;
 
     a {

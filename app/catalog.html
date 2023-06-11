@@ -653,17 +653,105 @@
 
   </div>
 
-  <div class="modal modal-call" id="modal-call" aria-hidden="true">
+  <div class="modal modal-buy" id="modal-buy" aria-hidden="true">
   <div class="modal__wrapper">
     <div class="modal__inner">
       <div class="modal__content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum corrupti, officia omnis vitae quae quidem nostrum
-        aliquid voluptas consectetur laudantium, qui excepturi recusandae dolorem doloribus aperiam ratione eius numquam
-        debitis.
+        <div class="modal__title">Купить в 1 клик</div>
+        <div class="modal-buy__head">
+          <div class="modal-buy__img"><img src="img/products-slider-2.jpg" width="40" height="40" alt=""></div>
+          <div class="modal-buy__name">V-band хомут с фланцами быстросъемный 4» (102 мм) с проточкой, нержа</div>
+          <div class="modal-buy__counter counter">
+            <button class="counter__btn counter__btn--minus" type="button"></button>
+            <div class="counter__value">1</div>
+            <button class="counter__btn counter__btn--plus" type="button"></button>
+          </div>
+          <div class="modal-buy__price">420 ₽</div>
+        </div>
+
+        <form class="modal__form form" action="#">
+          <div class="modal__form-items">
+            <label class="form-item">
+              <span class="form-item__caption">Контактное лицо <span>*</span></span>
+              <input type="text" class="form-input" placeholder="Укажите ваше имя">
+            </label>
+            <label class="form-item">
+              <span class="form-item__caption">Город <span>*</span></span>
+              <input type="text" class="form-input" placeholder="Укажите ваш город">
+            </label>
+            <label class="form-item">
+              <span class="form-item__caption">Ваш e-mail <span>*</span></span>
+              <input type="text" class="form-input" placeholder="Укажите ваш email">
+            </label>
+            <label class="form-item">
+              <span class="form-item__caption">Ваш телефон <span>*</span></span>
+              <input type="text" class="form-input" placeholder="Укажите ваш email">
+            </label>
+            <label class="modal__form-textarea form-item">
+              <span class="form-item__caption">Ваш комментарий</span>
+              <textarea class="form-input" placeholder="Ваш комментарий"></textarea>
+            </label>
+          </div>
+          <button class="modal__form-btn btn">Отправить заявку</button>
+          <label class="form-checkbox">
+            <input type="checkbox">
+            <span class="form-checkbox__box"></span>
+            <span class="form-checkbox__text">Я согласен (-на) с <a href="#" target="_blank">политикой обработки
+                персональных данных</a> *</span>
+          </label>
+        </form>
       </div>
-      <button class="modal__close" data-modal-close>
-        <img src="img/close-icon.svg" width="30" height="30" alt="Close icon">
-      </button>
+      <button class="modal__close" data-modal-close></button>
+    </div>
+  </div>
+</div>
+<div class="modal modal-stock" id="modal-stock" aria-hidden="true">
+  <div class="modal__wrapper">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <div class="modal__title">Наличие товара в магазинах</div>
+        <div class="modal__table">
+          <table>
+            <tr>
+              <th>
+                <div class="modal__city">Владивосток</div>
+                <div class="modal__street">ул. Выселковая, 30</div>
+              </th>
+              <td>
+                <div class="modal__stock">В наличии</div>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <div class="modal__city">Хабаровск</div>
+                <div class="modal__street">ул. Индустриальная 1Б, ТЦ Универсал. Место № 18</div>
+              </th>
+              <td>
+                <div class="modal__stock modal__stock--no">Нет в наличии</div>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <div class="modal__city">Благовещенск</div>
+                <div class="modal__street">ул. Воронкова 1</div>
+              </th>
+              <td>
+                <div class="modal__stock">В наличии</div>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <div class="modal__city">Москва</div>
+                <div class="modal__street">ул. Южнопортовая 22с1, 2 этаж, павильон 206в</div>
+              </th>
+              <td>
+                <div class="modal__stock">В наличии</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <button class="modal__close" data-modal-close> </button>
     </div>
   </div>
 </div>

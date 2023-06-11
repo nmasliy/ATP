@@ -1,0 +1,52 @@
+.counter {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 10px;
+  border: 1px solid #d9d5d5;
+  border-radius: 7px;
+  padding: 10px;
+  width: 100px;
+  height: 50px;
+  background-color: $white-color;
+
+  &__btn {
+    position: relative;
+    border: none;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 13px;
+      height: 2px;
+      background: #8e8b8b;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__btn--plus {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 13px;
+      height: 2px;
+      background: #8e8b8b;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+  }
+
+  &__value {
+    padding: 0 5px;
+    text-align: center;
+  }
+}

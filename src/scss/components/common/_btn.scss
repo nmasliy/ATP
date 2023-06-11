@@ -100,16 +100,18 @@
   text-transform: uppercase;
   color: $primary-color;
   background: transparent;
-  transition: box-shadow $transition;
+  transition: $transition;
   cursor: pointer;
 
   &:focus,
   &:active {
-    box-shadow: 0 0 12px  rgba($primary-color, 0.6);
+    color: $white-color;
+    background-color: $primary-color;
   }
 
   @include hover {
-    box-shadow: 0 0 12px  rgba($primary-color, 0.6);
+    color: $white-color;
+    background-color: $primary-color;
   }
 }
 
@@ -152,8 +154,6 @@
 
   &:focus,
   &:active {
-    box-shadow: 0 0 12px  rgba($primary-color, 0.6);
-
     span::after {
       transform: translateY(-50%) translateX(-2px);
     }
