@@ -17,6 +17,8 @@ class Menu {
       burgerActiveCaption: 'Закрыть меню',
       transitionDelay: 400,
       breakpoint: 1024,
+      disableScroll: true,
+      animate: true,
     };
     this.options = { ...defaultOptions, ...options };
     this._init();
@@ -30,7 +32,10 @@ class Menu {
     this.options.menu.style.display = 'block';
     this.options.burger.setAttribute('aria-expanded', 'true');
     this.options.burger.setAttribute('aria-label', this.options.burgerActiveCaption);
-    this.html.classList.add('disable-scroll');
+
+    if (this.options.disableScroll) {
+      this.html.classList.add('disable-scroll');
+    }
 
     await waitFor(1);
 
@@ -38,7 +43,9 @@ class Menu {
     this.options.menu.classList.add('is-active');
     this.options.burger.classList.add('is-active');
 
-    await waitFor(this.options.transitionDelay);
+    if (this.options.animate) {
+      await waitFor(this.options.transitionDelay);
+    }
 
     this.isAnimating = false;
   }
@@ -52,9 +59,16 @@ class Menu {
     this.options.burger.classList.remove('is-active');
     this.options.burger.setAttribute('aria-expanded', 'false');
     this.options.burger.setAttribute('aria-label', this.options.burgerCaption);
-    this.html.classList.remove('disable-scroll');
 
-    await waitFor(this.options.transitionDelay);
+    if (this.options.disableScroll) {
+      this.html.classList.remove('disable-scroll');
+    }
+
+
+    if (this.options.animate) {
+      await waitFor(this.options.transitionDelay);
+    }
+
 
     this.options.overlay.style.display = '';
     this.options.menu.style.display = '';

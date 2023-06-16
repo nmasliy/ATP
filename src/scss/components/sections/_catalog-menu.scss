@@ -9,7 +9,7 @@
     background-color: #f5f5f5;
   }
 
-  &--mobile {
+  &__close {
     display: none;
   }
 }
@@ -143,12 +143,8 @@
       }
     }
   }
-}
 
-.menu--hover {
   .submenu {
-    transition: $transition;
-
     &__title {
       margin-bottom: 20px;
       font-family: $font-secondary;
@@ -176,7 +172,6 @@
         border-bottom: 1px solid #e3e3e3;
         font-weight: 400;
 
-        &:first-child,
         &:last-child {
           border-bottom: 1px solid transparent;
         }
@@ -203,6 +198,10 @@
     &__row {
       display: flex;
     }
+  }
+
+  .submenu:not(.is-active) {
+    transition: $transition;
 
     @include hover {
       a {
@@ -231,7 +230,43 @@
 }
 
 @media screen and (max-width: $menu-breakpoint) {
-  .catalog-menu--mobile {
-    display: block;
+  .catalog-menu {
+    margin-top: 36px;
   }
+
+  // .catalog-menu {
+  //   position: fixed;
+  //   left: 0;
+  //   top: 0;
+  //   bottom: 0;
+  //   z-index: 40;
+  //   display: none;
+  //   overflow: auto;
+  //   padding: 40px 16px 24px;
+  //   width: 100%;
+  //   max-width: 320px;
+  //   box-shadow: 0 0 15px rgba(0, 0, 0, 15%);
+  //   background-color: $bg-color;
+  //   opacity: 0;
+  //   transform: translateX(-100%);
+  //   transition: transform $menu-transition, opacity $menu-transition;
+
+  //   &__close {
+  //     position: absolute;
+  //     right: 15px;
+  //     top: 15px;
+  //     z-index: 2;
+  //     display: block;
+  //     border: none;
+  //     width: 20px;
+  //     height: 20px;
+  //     background: url("../img/close-icon.svg") center no-repeat;
+  //     cursor: pointer;
+  //   }
+
+  //   &.is-active {
+  //     opacity: 1;
+  //     transform: translateX(0);
+  //   }
+  // }
 }

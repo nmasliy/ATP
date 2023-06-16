@@ -1,7 +1,7 @@
 .header {
   &__wrapper {
     position: relative;
-    z-index: 3;
+    z-index: 15;
     font-weight: 500;
     font-size: 13px;
   }
@@ -120,21 +120,103 @@
   }
 
   &__catalog {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 20px;
     border: 1px solid #d9d5d5;
     border-radius: 7px;
-    padding: 14px 10px 10px 50px;
+    padding: 13px 10px 11px 20px;
     box-shadow: 0 0 1px transparent;
     font-family: $font-secondary;
     font-weight: 700;
     font-size: 16px;
+    line-height: normal;
+    text-align: center;
     text-transform: uppercase;
-    background: url("../img/catalog-icon.svg") center left 20px no-repeat;
-    transition: box-shadow $transition;
+    background: transparent;
+    transition: $menu-transition;
+    cursor: pointer;
 
-    @include hover {
-      box-shadow: 0 0 2px $black-color;
+    &-burger {
+      position: relative;
+      display: block;
+      flex-shrink: 0;
+      margin-right: 10px;
+      border: none;
+      padding: 0;
+      width: 20px;
+      height: 16px;
+      color: $grey-color;
+      background-color: transparent;
+      transition: background-color $menu-transition;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: currentcolor;
+        transition: $menu-transition;
+      }
+
+      &::before {
+        top: 0;
+      }
+
+      &::after {
+        top: calc(100% - 2px);
+      }
+
+      > span {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        display: block;
+        border-radius: 3px;
+        width: 100%;
+        height: 2px;
+        background-color: currentcolor;
+        transform: translateY(-50%);
+        transition: $menu-transition;
+      }
+    }
+
+    &:not(.is-active) {
+      @include hover {
+        color: $primary-color;
+
+        .header__catalog-burger {
+          color: $primary-color;
+        }
+      }
+    }
+
+    &.is-active {
+      border-color: transparent;
+      color: $white-color;
+      background-color: $primary-color;
+
+      .header__catalog-burger {
+        color: $white-color;
+
+        &::before {
+          top: 50%;
+          transform: rotate(45deg);
+        }
+
+        &::after {
+          top: 50%;
+          transform: rotate(-45deg);
+        }
+
+        > span {
+          transform: scale(0);
+        }
+      }
     }
   }
 
@@ -201,6 +283,86 @@
 
   &__icon--cart {
     background-image: url("../img/cart-icon.svg");
+  }
+
+  &.is-fixed {
+    .header-catalog {
+      top: var(--header-body-height);
+    }
+
+    .header {
+      &__body {
+        position: fixed;
+        left: 0;
+        top: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        width: 100%;
+      }
+
+      &__logo img {
+        width: 100px;
+      }
+    }
+  }
+}
+
+.header-catalog-overlay {
+  top: 0;
+  z-index: 12;
+}
+
+.header-catalog {
+  position: absolute;
+  left: 50%;
+  top: var(--header-height);
+  z-index: 20;
+  display: none;
+  border-radius: 0 0 7px 7px;
+  padding: 40px;
+  width: 100%;
+  max-width: 940px;
+  background-color: #fff;
+  opacity: 0;
+  transform: translate3d(-50%, 50%, 0);
+  transition: transform $menu-transition, opacity $menu-transition;
+
+  &__body {
+    @include grid(3, 40px);
+
+    li {
+      border-bottom: 1px solid #e3e3e3;
+      font-size: 16px;
+      line-height: 1.25;
+
+      a {
+        display: block;
+        padding: 10px 0;
+        transition: color $transition;
+
+        @include hover {
+          color: $primary-color;
+        }
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.25;
+    text-transform: uppercase;
+  }
+
+  &.is-active {
+    opacity: 1;
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
@@ -290,6 +452,37 @@
 
     &__nav ul {
       display: block;
+    }
+  }
+
+  .header-catalog-overlay {
+    display: none;
+    visibility: hidden;
+  }
+
+  .header-catalog {
+    position: static;
+    margin-bottom: 32px;
+    border-radius: 7px;
+    padding: 16px 10px;
+    transform: translate3d(0, 0, 0);
+
+    &__body {
+      display: block;
+
+      ul:last-child li:last-child {
+        border-bottom: none;
+      }
+
+      li {
+        &:last-child {
+          border-bottom: 1px solid #e3e3e3;
+        }
+      }
+    }
+
+    &.is-active {
+      transform: translate3d(0, 0, 0);
     }
   }
 }

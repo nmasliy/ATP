@@ -47,7 +47,10 @@
             </a>
           </div>
           <div class="header__body-items">
-            <a class="header__catalog" href="catalog.html">Каталог</a>
+            <button class="header__catalog">
+              <span class="header__catalog-burger"><span></span></span>
+              Каталог
+            </button>
             <form class="header__form" action="#">
               <div class="header__search">
                 <input type="search" class="header__search-input form-input"
@@ -66,12 +69,39 @@
           </button>
         </div>
       </div>
+      <div class="header-catalog">
+        <div class="header-catalog__title">Каталог</div>
+        <div class="header-catalog__body">
+          <ul>
+            <li><a href="#">Брелоки, сувениры, одежда</a></li>
+            <li><a href="#">Впускная система</a></li>
+            <li><a href="#">Выпускная система</a></li>
+            <li><a href="#">Двигатель и системы ДВС</a></li>
+            <li><a href="#">Турбины и комплектующие</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Интерьер</a></li>
+            <li><a href="#">Охлаждение</a></li>
+            <li><a href="#">Патрубки, хомуты и шланги</a></li>
+            <li><a href="#">Подвеска и трансмиссия</a></li>
+            <li><a href="#">Тормозная система и колеса</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Турбины и комплектующие</a></li>
+            <li><a href="#">Фитинги и адаптеры</a></li>
+            <li><a href="#">Экстерьер</a></li>
+            <li><a href="#">Электроника и датчики</a></li>
+            <li><a href="#">Автохимия</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 
   <div class="burger-menu">
   </div>
 
+  <div class="header-catalog-overlay overlay"></div>
   <div class="menu-overlay overlay"></div>
 </header>
 
@@ -405,26 +435,64 @@
   </div>
 </section>
 
-<aside class="catalog-menu catalog-menu--mobile">
-  <ul class="catalog-menu__list menu menu--clickable">
+<aside class="catalog__menu catalog-menu">
+  <ul class="catalog-menu__list menu">
     <li class="submenu">
       <a href="#">Брелоки, сувениры, одежда</a>
+
       <ul>
-        <li><a href="#">Брелоки</a></li>
-        <li><a href="#">Сувениры</a></li>
-        <li><a href="#">Одежда</a></li>
+        <li><a href="#">Пункт 1</a></li>
+        <li><a href="#">Пункт 2</a></li>
+        <li><a href="#">Пункт 3</a></li>
       </ul>
+
+      <div class="submenu__content" style="background-image: url('img/categories-1.png');">
+        <div class="submenu__title">Брелоки, сувениры, одежда</div>
+        <div class="submenu__row">
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Привода</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Рычаги, линки, теншены</a></li>
+            <li><a href="#">Сайлентблоки усиленные</a></li>
+            <li><a href="#">Стойки</a></li>
+            <li><a href="#">Сцепление</a></li>
+            <li><a href="#">Тюнинг КПП</a></li>
+          </ul>
+        </div>
+      </div>
     </li>
     <li class="submenu">
       <a href="#">Впускная система</a>
-      <ul>
-        <li><a href="#">Впускная система 1</a></li>
-        <li><a href="#">Впускная система 2</a></li>
-        <li><a href="#">Впускная система 3</a></li>
-      </ul>
+      <div class="submenu__content" style="background-image: url('img/categories-2.png');">
+        <div class="submenu__title">Впускная система</div>
+        <div class="submenu__row">
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Привода</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Рычаги, линки, теншены</a></li>
+            <li><a href="#">Сайлентблоки усиленные</a></li>
+            <li><a href="#">Стойки</a></li>
+            <li><a href="#">Сцепление</a></li>
+            <li><a href="#">Тюнинг КПП</a></li>
+          </ul>
+        </div>
+      </div>
     </li>
-    <li class="submenu is-active">
+    <li class="submenu">
       <a href="#">Выпускная система</a>
+
       <ul>
         <li><a href="#">Аксессуары</a></li>
         <li class="submenu">
@@ -469,7 +537,7 @@
             <li><a href="#">Отводы</a></li>
           </ul>
         </li>
-        <li class="submenu is-active">
+        <li class="submenu">
           <a href="#">Фланцы, прокладки</a>
           <ul>
             <li class="is-current"><a href="#">V-band фланцы и хомуты</a></li>
@@ -478,105 +546,316 @@
           </ul>
         </li>
       </ul>
+
+      <div class="submenu__content" style="background-image: url('img/categories-3.png');">
+        <div class="submenu__title">Выпускная система</div>
+        <div class="submenu__row">
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Привода</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Рычаги, линки, теншены</a></li>
+            <li><a href="#">Сайлентблоки усиленные</a></li>
+            <li><a href="#">Стойки</a></li>
+            <li><a href="#">Сцепление</a></li>
+            <li><a href="#">Тюнинг КПП</a></li>
+          </ul>
+        </div>
+      </div>
     </li>
     <li class="submenu">
       <a href="#">Двигатель и системы ДВС</a>
+
       <ul>
         <li><a href="#">Пункт 1</a></li>
         <li><a href="#">Пункт 2</a></li>
         <li><a href="#">Пункт 3</a></li>
       </ul>
+
+      <div class="submenu__content" style="background-image: url('img/categories-4.png');">
+        <div class="submenu__title">Двигатель и системы ДВС</div>
+        <div class="submenu__row">
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Привода</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Рычаги, линки, теншены</a></li>
+            <li><a href="#">Сайлентблоки усиленные</a></li>
+            <li><a href="#">Стойки</a></li>
+            <li><a href="#">Сцепление</a></li>
+            <li><a href="#">Тюнинг КПП</a></li>
+          </ul>
+        </div>
+      </div>
     </li>
     <li class="submenu">
       <a href="#">Турбины и комплектующие</a>
+
       <ul>
         <li><a href="#">Пункт 1</a></li>
         <li><a href="#">Пункт 2</a></li>
         <li><a href="#">Пункт 3</a></li>
       </ul>
+
+      <div class="submenu__content" style="background-image: url('img/categories-5.png');">
+        <div class="submenu__title">Турбины и комплектующие</div>
+        <div class="submenu__row">
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+        </div>
+      </div>
     </li>
     <li class="submenu">
       <a href="#">Интерьер</a>
+
       <ul>
         <li><a href="#">Пункт 1</a></li>
         <li><a href="#">Пункт 2</a></li>
         <li><a href="#">Пункт 3</a></li>
       </ul>
+
+      <div class="submenu__content" style="background-image: url('img/categories-6.png');">
+        <div class="submenu__title">Интерьер</div>
+        <div class="submenu__row">
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+        </div>
+      </div>
     </li>
     <li class="submenu">
-      <a href="#">Охлаждение</a>
+      <a href="#">Интерьер</a>
+
       <ul>
         <li><a href="#">Пункт 1</a></li>
         <li><a href="#">Пункт 2</a></li>
         <li><a href="#">Пункт 3</a></li>
       </ul>
+
+      <div class="submenu__content" style="background-image: url('img/categories-7.png');">
+        <div class="submenu__title">Интерьер</div>
+        <div class="submenu__row">
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+        </div>
+      </div>
     </li>
     <li class="submenu">
       <a href="#">Патрубки, хомуты и шланги</a>
+
       <ul>
         <li><a href="#">Пункт 1</a></li>
         <li><a href="#">Пункт 2</a></li>
         <li><a href="#">Пункт 3</a></li>
       </ul>
+
+      <div class="submenu__content" style="background-image: url('img/categories-8.png');">
+        <div class="submenu__title">Патрубки, хомуты и шланги</div>
+        <div class="submenu__row">
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+        </div>
+      </div>
     </li>
     <li class="submenu">
       <a href="#">Подвеска и трансмиссия</a>
+
       <ul>
         <li><a href="#">Пункт 1</a></li>
         <li><a href="#">Пункт 2</a></li>
         <li><a href="#">Пункт 3</a></li>
       </ul>
+
+      <div class="submenu__content" style="background-image: url('img/categories-10.png');">
+        <div class="submenu__title">Подвеска и трансмиссия</div>
+        <div class="submenu__row">
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+        </div>
+      </div>
     </li>
     <li class="submenu">
       <a href="#">Тормозная система и колеса</a>
+
       <ul>
         <li><a href="#">Пункт 1</a></li>
         <li><a href="#">Пункт 2</a></li>
         <li><a href="#">Пункт 3</a></li>
       </ul>
+
+      <div class="submenu__content" style="background-image: url('img/categories-9.png');">
+        <div class="submenu__title">Тормозная система и колеса</div>
+        <div class="submenu__row">
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+        </div>
+      </div>
     </li>
     <li class="submenu">
       <a href="#">Турбины и комплектующие</a>
+
       <ul>
         <li><a href="#">Пункт 1</a></li>
         <li><a href="#">Пункт 2</a></li>
         <li><a href="#">Пункт 3</a></li>
       </ul>
+
+      <div class="submenu__content" style="background-image: url('img/categories-10.png');">
+        <div class="submenu__title">Турбины и комплектующие</div>
+        <div class="submenu__row">
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+        </div>
+      </div>
     </li>
     <li class="submenu">
       <a href="#">Фитинги и адаптеры</a>
+
       <ul>
         <li><a href="#">Пункт 1</a></li>
         <li><a href="#">Пункт 2</a></li>
         <li><a href="#">Пункт 3</a></li>
       </ul>
+
+      <div class="submenu__content" style="background-image: url('img/categories-11.png');">
+        <div class="submenu__title">Фитинги и адаптеры</div>
+        <div class="submenu__row">
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+        </div>
+      </div>
     </li>
     <li class="submenu">
       <a href="#">Экстерьер</a>
+
       <ul>
         <li><a href="#">Пункт 1</a></li>
         <li><a href="#">Пункт 2</a></li>
         <li><a href="#">Пункт 3</a></li>
       </ul>
+
+      <div class="submenu__content" style="background-image: url('img/categories-1.png');">
+        <div class="submenu__title">Экстерьер</div>
+        <div class="submenu__row">
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+        </div>
+      </div>
     </li>
     <li class="submenu">
       <a href="#">Электроника и датчики</a>
+
       <ul>
         <li><a href="#">Пункт 1</a></li>
         <li><a href="#">Пункт 2</a></li>
         <li><a href="#">Пункт 3</a></li>
       </ul>
+
+      <div class="submenu__content" style="background-image: url('img/categories-8.png');">
+        <div class="submenu__title">Электроника и датчики</div>
+        <div class="submenu__row">
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+        </div>
+      </div>
     </li>
     <li class="submenu">
       <a href="#">Автохимия</a>
+
       <ul>
         <li><a href="#">Пункт 1</a></li>
         <li><a href="#">Пункт 2</a></li>
         <li><a href="#">Пункт 3</a></li>
       </ul>
+
+      <div class="submenu__content" style="background-image: url('img/categories-8.png');">
+        <div class="submenu__title">Автохимия</div>
+        <div class="submenu__row">
+          <ul>
+            <li><a href="#">Втулки кулисы</a></li>
+            <li><a href="#">Запчасти к стойкам, ШС, ключи</a></li>
+            <li><a href="#">Кулисы кпп</a></li>
+            <li><a href="#">Маховики</a></li>
+            <li><a href="#">Пружины</a></li>
+          </ul>
+        </div>
+      </div>
     </li>
   </ul>
-  <button class="catalog__close"></button>
+  <button class="catalog-menu__close"></button>
 </aside>
 <div class="catalog-overlay overlay"></div>
 
@@ -632,7 +911,7 @@
         </div>
         <div class="footer__col"><a href="#" target="_blank">Политика конфиденциальности</a></div>
         <div class="footer__col">
-          <p class="footer__caption">Разработка сайта: AgentFox</p>
+          <p class="footer__caption"><a href="https://agent-fox.ru/" target="_blank">Разработка сайта: AgentFox</a></p>
         </div>
       </div>
     </div>

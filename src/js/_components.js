@@ -5,4 +5,5 @@ import './components/sliders';
 import './components/fslightbox';
 import './components/map';
 import './components/selects';
+import './components/header-catalog';
 import './components/catalog';
