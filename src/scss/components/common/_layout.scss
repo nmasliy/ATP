@@ -2,6 +2,7 @@
   @include footerToBottom;
 
   overflow: hidden;
+  padding-top: var(--header-height);
 }
 
 .page-offset-b {

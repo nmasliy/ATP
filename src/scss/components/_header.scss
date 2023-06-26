@@ -1,4 +1,10 @@
 .header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 6;
+  width: 100%;
+
   &__wrapper {
     position: relative;
     z-index: 15;
@@ -369,7 +375,10 @@
 
 @media screen and (max-width: $menu-breakpoint) {
   .header {
+    position: fixed;
+
     &__body {
+      position: relative;
       padding: 12px 0;
     }
 
@@ -453,6 +462,12 @@
 
     &__nav ul {
       display: block;
+    }
+
+    &.is-fixed {
+      .header__body {
+        padding: 12px 0;
+      }
     }
   }
 
