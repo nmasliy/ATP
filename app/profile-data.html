@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title></title>
+<title>ATP — Личный кабинет</title>
 <link rel="stylesheet" href="css/vendor.css">
 <link rel="stylesheet" href="css/main.css">
 
@@ -107,97 +107,50 @@
 
     <div class="main-content ">
 
-<style>
-  .text-section {
-    padding: 50px 0;
-  }
-
-  .test-list {
-    margin: 20px 0;
-  }
-
-  .test-list li {
-    margin-bottom: 15px;
-  }
-
-  .test-list a {
-    padding: 10px;
-    font-size: 20px;
-  }
-</style>
-<div class="text-section">
+<section class="profile">
   <div class="container">
-    <ul class="test-list">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="catalog-main.html">Каталог основной</a></li>
-      <li><a href="catalog.html">Каталог категории</a></li>
-      <li><a href="product.html">Карточка товара</a></li>
-      <li><a href="product-no-stock.html">Карточка товара — нет в наличии</a></li>
-      <hr>
-      <li><a href="profile-data.html">Личный кабинет</a></li>
-      <li><a href="profile-company.html">Профиль компании</a></li>
-    </ul>
-    <hr>
-    <ul class="test-list">
-      <li><button class="btn" data-modal-open="modal-buy">Модалка — Купить в 1 клик</button></li>
-      <li><button class="btn" data-modal-open="modal-stock">Модалка — Наличие товара в магазинах</button></li>
-    </ul>
-
-    <hr>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero
-      quisquam
-      quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-      dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem,
-      quam
-      ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit
-      amet
-      consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-      deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-    </p><p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero
-      quisquam
-      quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-      dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem,
-      quam
-      ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit
-      amet
-      consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-      deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-    </p><p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero
-      quisquam
-      quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-      dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem,
-      quam
-      ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit
-      amet
-      consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-      deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-    </p><p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero
-      quisquam
-      quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-      dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem,
-      quam
-      ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit
-      amet
-      consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-      deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-    </p><p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero
-      quisquam
-      quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-      dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem,
-      quam
-      ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit
-      amet
-      consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-      deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-    </p>
-
-  </div>
+    <div class="breadcrumbs">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Личный кабинет</a></li>
+        <li><a href="#">Личные данные</a></li>
+      </ul>
+    </div>
+    <div class="profile__inner">
+      <div class="profile__content">
+        <h1 class="profile__title title">Личный кабинет</h1>
+        <div class="profile__box">
+  <form class="profile-form" action="#">
+    <div class="profile__box-title">Настройка личных данных</div>
+    <label class="profile-form__item form-item">
+      <span class="form-item__caption">ФИО <span>*</span></span>
+      <input class="form-input" type="text" value="Константинопольский Константин Константинович">
+    </label>
+    <label class="profile-form__item form-item">
+      <span class="form-item__caption">Email <span>*</span></span>
+      <input class="form-input" type="text" value="Konstantin@gmail.com">
+    </label>
+    <label class="profile-form__item form-item">
+      <span class="form-item__caption">Телефон <span>*</span></span>
+      <input class="form-input form-input--w-auto" type="text" value="+7 (999) 888-77-66">
+    </label>
+    <button class="profile-form__btn btn">Сохранить</button>
+  </form>
 </div>
+
+      </div>
+      <aside class="page-menu">
+  <ul>
+    <li class="is-active"><a href="profile-data.html">Личные данные</a></li>
+    <li><a href="profile-company.html">Профиль компании</a></li>
+    <li><a href="profile-delivery.html">Адрес доставки</a></li>
+    <li><a href="profile-orders.html">История заказов</a></li>
+  </ul>
+</aside>
+
+    </div>
+  </div>
+</section>
 
     </div>
 

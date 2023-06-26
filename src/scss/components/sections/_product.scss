@@ -93,6 +93,10 @@
 
   &__slide {
     height: 460px;
+
+    a {
+      display: block;
+    }
   }
 
   &__thumbs-slide {

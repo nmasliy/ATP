@@ -1,0 +1,228 @@
+.profile {
+  padding-bottom: 80px;
+
+  &__content {
+    order: 3;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 260px auto;
+    gap: 40px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__box {
+    border-radius: 7px;
+    padding: 30px;
+    background-color: $bg-color;
+  }
+
+  &__box-title {
+    margin-bottom: 25px;
+    font-family: $font-secondary;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  &__orders {
+    background-color: $bg-color;
+
+    table {
+      margin: -10px 0;
+      border-collapse: separate;
+      border-spacing: 0 10px;
+      width: 100%;
+    }
+
+    th {
+      padding: 0 20px 10px;
+      font-size: 13px;
+      color: #a8a5a5;
+    }
+
+    td {
+      padding: 20px;
+      background: $white-color;
+
+      &:first-child {
+        border-radius: 7px 0 0 7px;
+      }
+
+      &:last-child {
+        border-radius: 0 7px 7px 0;
+        min-width: 100px;
+      }
+    }
+
+    thead tr {
+      box-shadow: none;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    th,
+    td {
+      vertical-align: middle;
+      text-align: left;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+
+    tr {
+      border-radius: 7px;
+      box-shadow: 0 0 0 1px #e3e3e3;
+    }
+  }
+}
+
+.profile-form {
+  border-radius: 7px;
+  padding: 30px;
+  background-color: $white-color;
+
+  &__item {
+    @include mb(20px);
+
+    max-width: 440px;
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 440px;
+    background: $gradient;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 130px 130px;
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .profile__box-title {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .profile {
+    &__orders {
+      font-size: 13px;
+
+      td {
+        padding: 12px 10px;
+      }
+
+      th {
+        padding: 0 12px 12px;
+      }
+    }
+
+    &__inner {
+      grid-template-columns: 200px auto;
+      gap: 20px;
+    }
+  }
+
+  .profile-form {
+    &__row {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile {
+    &__box-title {
+      font-size: 20px;
+    }
+
+    &__inner {
+      display: block;
+    }
+
+    &__box {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .profile__orders {
+    padding: 10px;
+    background-color: transparent;
+
+    table {
+      display: block;
+      margin: 0;
+    }
+
+    tr,
+    td {
+      display: block;
+      padding: 0;
+      box-shadow: none;
+    }
+
+    thead {
+      display: none;
+    }
+
+    tbody {
+      display: block;
+      width: 100%;
+    }
+
+    tr {
+      margin-bottom: 16px;
+      border: 1px solid $grey-color;
+      padding: 10px;
+      background-color: $white-color;
+    }
+
+    td {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+      text-align: left;
+      background-color: transparent;
+
+      &::before {
+        content: attr(data-text);
+        display: block;
+        margin-left: 4px;
+        color: $black-color;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile-form {
+    padding: 0;
+  }
+
+  .profile {
+    &__box {
+      padding: 0;
+    }
+  }
+}

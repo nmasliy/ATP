@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title></title>
+<title>ATP — Адреса доставки</title>
 <link rel="stylesheet" href="css/vendor.css">
 <link rel="stylesheet" href="css/main.css">
 
@@ -107,97 +107,68 @@
 
     <div class="main-content ">
 
-<style>
-  .text-section {
-    padding: 50px 0;
-  }
-
-  .test-list {
-    margin: 20px 0;
-  }
-
-  .test-list li {
-    margin-bottom: 15px;
-  }
-
-  .test-list a {
-    padding: 10px;
-    font-size: 20px;
-  }
-</style>
-<div class="text-section">
+<section class="profile">
   <div class="container">
-    <ul class="test-list">
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="catalog-main.html">Каталог основной</a></li>
-      <li><a href="catalog.html">Каталог категории</a></li>
-      <li><a href="product.html">Карточка товара</a></li>
-      <li><a href="product-no-stock.html">Карточка товара — нет в наличии</a></li>
-      <hr>
-      <li><a href="profile-data.html">Личный кабинет</a></li>
-      <li><a href="profile-company.html">Профиль компании</a></li>
-    </ul>
-    <hr>
-    <ul class="test-list">
-      <li><button class="btn" data-modal-open="modal-buy">Модалка — Купить в 1 клик</button></li>
-      <li><button class="btn" data-modal-open="modal-stock">Модалка — Наличие товара в магазинах</button></li>
-    </ul>
-
-    <hr>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero
-      quisquam
-      quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-      dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem,
-      quam
-      ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit
-      amet
-      consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-      deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-    </p><p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero
-      quisquam
-      quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-      dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem,
-      quam
-      ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit
-      amet
-      consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-      deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-    </p><p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero
-      quisquam
-      quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-      dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem,
-      quam
-      ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit
-      amet
-      consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-      deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-    </p><p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero
-      quisquam
-      quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-      dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem,
-      quam
-      ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit
-      amet
-      consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-      deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-    </p><p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero
-      quisquam
-      quidem, quam ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum
-      dolor sit amet consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem,
-      quam
-      ipsum eum deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere? Lorem, ipsum dolor sit
-      amet
-      consectetur adipisicing elit. Corporis cupiditate assumenda placeat fuga libero quisquam quidem, quam ipsum eum
-      deleniti magni pariatur similique odit ad eaque ipsam maiores commodi facere?
-    </p>
-
+    <div class="breadcrumbs">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Личный кабинет</a></li>
+        <li><a href="#">Адреса доставки</a></li>
+      </ul>
+    </div>
+    <div class="profile__inner">
+      <div class="profile__content">
+        <h1 class="profile__title title">История заказов</h1>
+        <div class="profile__box">
+  <div class="profile__orders">
+    <table>
+      <thead>
+        <th>Дата</th>
+        <th>Номер</th>
+        <th>Статус</th>
+        <th>Оплата</th>
+        <th>Сумма</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-text="Дата">01.06.2023</td>
+          <td data-text="Номер">11161456</td>
+          <td data-text="Статус" class="color-green">Доставлен</td>
+          <td data-text="Оплата" class="color-green">Оплачен</td>
+          <td data-text="Сумма">18 040 ₽</td>
+        </tr>
+        <tr>
+          <td data-text="Дата">02.06.2023</td>
+          <td data-text="Номер">15616156</td>
+          <td data-text="Статус" class="color-yellow">В пути</td>
+          <td data-text="Оплата" class="color-green">Оплачен</td>
+          <td data-text="Сумма">25 690 ₽</td>
+        </tr>
+        <tr>
+          <td data-text="Дата">03.06.2023</td>
+          <td data-text="Номер">12312323</td>
+          <td data-text="Статус" class="color-grey">В обработке</td>
+          <td data-text="Оплата" class="color-red">Не оплачен</td>
+          <td data-text="Сумма">5 630 ₽</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
+
+      </div>
+      <aside class="page-menu">
+        <ul>
+          <li><a href="profile-data.html">Личные данные</a></li>
+          <li><a href="profile-company.html">Профиль компании</a></li>
+          <li><a href="profile-delivery.html">Адрес доставки</a></li>
+          <li class="is-active"><a href="profile-orders.html">История заказов</a></li>
+        </ul>
+      </aside>
+
+    </div>
+  </div>
+</section>
 
     </div>
 

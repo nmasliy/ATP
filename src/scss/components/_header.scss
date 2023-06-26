@@ -140,6 +140,7 @@
 
     &-burger {
       position: relative;
+      bottom: 1px;
       display: block;
       flex-shrink: 0;
       margin-right: 10px;
@@ -483,6 +484,20 @@
 
     &.is-active {
       transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .header {
+    &__logo img {
+      width: 80px;
+    }
+
+    &.is-fixed {
+      .header__logo img {
+        width: 80px;
+      }
     }
   }
 }

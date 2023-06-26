@@ -1,0 +1,26 @@
+{% set title = "ATP - Личный кабинет" %}
+
+{% extends "../templates/layouts/layout.njk" %}
+
+{% block content %}
+
+<section class="profile">
+  <div class="container">
+    <div class="breadcrumbs">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Личный кабинет</a></li>
+        <li><a href="#">Личные данные</a></li>
+      </ul>
+    </div>
+    <div class="profile__inner">
+      <div class="profile__content">
+        <h1 class="profile__title title">Личный кабинет</h1>
+        {% include "../templates/sections/profile/data.njk" %}
+      </div>
+      {% include "../templates/sections/page-menu.njk" %}
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

@@ -27,6 +27,10 @@
     color: $grey-color;
     opacity: 1;
   }
+
+  &--w-auto {
+    width: auto;
+  }
 }
 
 textarea.form-input {

@@ -63,20 +63,15 @@
     margin-bottom: 10px;
     font-family: $font-secondary;
     font-weight: 700;
+    font-size: 16px;
     text-transform: uppercase;
+    color: $white-color;
   }
 
   &__form {
     p {
       max-width: 460px;
     }
-  }
-
-  &__title {
-    font-weight: 700;
-    font-size: 16px;
-    text-transform: uppercase;
-    color: $white-color;
   }
 
   &__form-field {
@@ -90,6 +85,10 @@
 
   &__caption {
     text-align: right;
+
+    img {
+      margin-left: 10px;
+    }
   }
 
   &__btn {
