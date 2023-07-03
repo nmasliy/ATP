@@ -394,13 +394,14 @@
     }
 
     &__form {
-      margin-bottom: 16px;
+      margin-right: 0;
+      margin-bottom: 30px;
     }
 
     &__icons {
       @include grid(3, 12px);
 
-      margin: 0 0 16px;
+      margin: 0 0 40px;
       font-size: 14px;
     }
 
@@ -418,17 +419,25 @@
     }
 
     &__phone {
+      padding-left: 25px;
+      font-size: 20px;
       background-image: url("../img/phone-icon-black.svg");
-    }
-
-    &__contacts {
-      order: 3;
+      background-size: 16px;
     }
 
     &__icon {
       margin: 0;
       padding-top: 40px;
       max-width: 100%;
+      font-weight: 500;
+      font-size: 13px;
+    }
+
+    &__whatsapp {
+      width: 28px;
+      height: 28px;
+      font-size: 0;
+      background-size: cover;
     }
 
     &__city {
@@ -441,7 +450,8 @@
     &__catalog {
       order: -1;
       margin-right: 0;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
+      padding: 16px 10px 14px 20px;
       background-color: $white-color;
     }
 
@@ -449,6 +459,10 @@
       display: flex;
       flex-direction: column;
       align-items: stretch;
+    }
+
+    &__contacts {
+      margin-right: 16px;
     }
 
     &__body-inner {
@@ -513,6 +527,24 @@
       .header__logo img {
         width: 80px;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    &__logo {
+      margin-right: 16px;
+    }
+
+    &__whatsapp {
+      width: 20px;
+      height: 20px;
+    }
+
+    &__phone {
+      font-size: 16px;
+      white-space: nowrap;
     }
   }
 }

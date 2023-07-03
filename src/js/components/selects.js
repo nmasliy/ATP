@@ -1,4 +1,5 @@
 const selects = document.querySelectorAll('.form-select select');
+import { setCenter } from "./map";
 
 selects?.forEach((select) => {
   const form = select.closest('form');
@@ -35,3 +36,19 @@ selects?.forEach((select) => {
     }
   }
 });
+
+
+const contactsSelect = document.querySelector('.contacts__select select');
+
+if (contactsSelect) {
+
+  contactsSelect.addEventListener('change', (e) => {
+    const selectedId = e.target.options[e.target.selectedIndex].dataset.tabs;
+
+    const tab = document.querySelector('.contacts__tabs li[data-tabs="' + selectedId + '"]');
+
+    setCenter(tab.dataset.coords);
+
+  })
+
+}

@@ -83,6 +83,10 @@
     margin: -5px -10px;
   }
 
+  &__collapse {
+    display: none;
+  }
+
   &__col {
     flex-grow: 1;
     margin: 5px 10px;
@@ -120,8 +124,6 @@
   .catalog {
     &__inner {
       display: flex;
-
-      // display: block;
       flex-direction: column-reverse;
       gap: 0;
     }
@@ -156,16 +158,58 @@
   .catalog-filter {
     padding: 0;
 
+    &__collapse {
+      position: relative;
+      display: block;
+      padding-right: 20px;
+      font-size: 14px;
+      color: $grey-color;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 12px;
+        height: 17px;
+        background: url("../img/chevron-down-icon.svg") center no-repeat;
+        transform: translateY(-50%);
+      }
+    }
+
     &__row {
       display: block;
       margin: 0 0 12px;
     }
 
+    &__clear {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
     &__col {
+      display: none;
       margin: 0 0 12px;
 
       &:last-child {
         margin: 0;
+      }
+
+      &--show-mobile {
+        display: block;
+      }
+    }
+
+    &.is-active {
+      .catalog-filter {
+        &__collapse::after {
+          transform: translateY(-50%) rotate(180deg);
+        }
+
+        &__col {
+          display: block;
+        }
       }
     }
   }
@@ -191,6 +235,25 @@
       margin-top: 12px;
       margin-left: auto;
       width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .catalog-filter {
+    &__collapse {
+      margin-right: 0;
+      margin-bottom: 12px;
+    }
+
+    &__reset {
+      padding-left: 0;
+    }
+
+    &__clear {
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
     }
   }
 }

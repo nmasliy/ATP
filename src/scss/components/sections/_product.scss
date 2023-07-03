@@ -374,10 +374,11 @@
 
     &__col {
       margin: 0;
+      margin-bottom: 32px;
       width: auto;
 
       &:first-child {
-        margin-bottom: 32px;
+        margin-bottom: 0;
         width: auto;
       }
     }
@@ -388,5 +389,13 @@
   .product__btn {
     flex-grow: 1;
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .product {
+    &__btn--w-half {
+      width: auto;
+    }
   }
 }

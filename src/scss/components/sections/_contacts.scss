@@ -15,6 +15,10 @@
     width: 560px;
   }
 
+  &__select {
+    display: none;
+  }
+
   &__title {
     margin-bottom: 40px;
   }
@@ -116,6 +120,19 @@
 
 @media screen and (max-width: 1024px) {
   .contacts {
+    &__select {
+      display: block;
+      margin-bottom: 20px;
+
+      select {
+        background-image: url("../img/select-icon.svg");
+      }
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+
     &__inner {
       display: block;
       padding: 60px 0 0;
@@ -127,13 +144,7 @@
     }
 
     &__tabs {
-      flex-wrap: nowrap;
-      overflow: auto;
-      width: 100%;
-
-      li {
-        flex-shrink: 0;
-      }
+      display: none;
     }
 
     &__content {

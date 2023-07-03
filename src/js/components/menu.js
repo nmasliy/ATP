@@ -31,6 +31,12 @@ moveElementOnBreakpoint(
   { toSelector: '.burger-menu', toPosition: 'beforeend' },
   1200
 );
+moveElementOnBreakpoint(
+  '.header__contacts',
+  { fromSelector: '.header__nav', fromPosition: 'afterend' },
+  { toSelector: '.burger', toPosition: 'beforebegin' },
+  1200
+);
 
 function toggleHeader() {
 

@@ -108,6 +108,11 @@
 
 @media screen and (max-width: 1024px) {
   .footer {
+    &__payments {
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+
     &__main {
       padding-bottom: 35px;
     }

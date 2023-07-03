@@ -555,7 +555,7 @@
         <div class="catalog__filter catalog-filter">
           <form class="catalog-filter__form" action="#">
             <div class="catalog-filter__row">
-              <div class="catalog-filter__col">
+              <div class="catalog-filter__col catalog-filter__col--show-mobile">
                 <label class="catalog-filter__select form-select">
                   <span>Модели</span>
                   <select>
@@ -566,7 +566,7 @@
                   </select>
                 </label>
               </div>
-              <div class="catalog-filter__col">
+              <div class="catalog-filter__col catalog-filter__col--show-mobile">
                 <label class="catalog-filter__select form-select">
                   <span>Диаметр (дюймы)</span>
                   <select>
@@ -617,6 +617,8 @@
               </div>
             </div>
             <div class="catalog-filter__clear">
+              <div class="catalog-filter__collapse" data-show="Раскрыть фильтры" data-hide="Свернуть фильтры">Раскрыть
+                фильтры</div>
               <button class="catalog-filter__reset" type="reset">Очистить все фильтры</button>
             </div>
           </form>

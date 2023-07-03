@@ -6,20 +6,23 @@ const catalogBtn = document.querySelector('.header__catalog');
 const catalogMenu = document.querySelector('.menu');
 const catalogHoverItems = document.querySelectorAll('.submenu');
 const catalogOverlay = document.querySelector('.catalog-overlay');
+const catalogFilter = document.querySelector('.catalog-filter');
+
+if (catalogFilter) {
+  const catalogFilterCollapse = catalogFilter.querySelector('.catalog-filter__collapse');
+
+  catalogFilterCollapse.addEventListener('click', (e) => {
+    if (catalogFilter.classList.contains('is-active')) {
+      catalogFilter.classList.remove('is-active');
+      catalogFilterCollapse.textContent = catalogFilterCollapse.dataset.show;
+    } else {
+      catalogFilter.classList.add('is-active');
+      catalogFilterCollapse.textContent = catalogFilterCollapse.dataset.hide;
+    }
+  })
+}
 
 let width = window.innerWidth;
-
-// const menu = new Menu({
-//   menu: document.querySelector('.catalog-menu'),
-//   burger: catalogBtn,
-//   close: document.querySelector('.catalog-menu__close'),
-//   overlay: document.querySelector('.catalog-overlay'),
-//   navLinks: document.querySelectorAll('.catalog-menu li a'),
-//   burgerCaption: 'Открыть каталог',
-//   burgerActiveCaption: 'Закрыть каталог',
-//   transitionDelay: 400,
-//   breakpoint: 1200,
-// });
 
 const checkWidth = () => {
   width = window.innerWidth;
@@ -35,23 +38,3 @@ catalogHoverItems.forEach(item => {
     catalogOverlay.classList.remove('is-active');
   })
 })
-
-// catalogBtn.addEventListener('click', (e) => {
-//   headerMenu.close();
-
-//   if (width <= 1200) {
-//     e.preventDefault();
-//   }
-// });
-
-// window.addEventListener('resize', throttle(checkWidth));
-
-// catalogMenu?.addEventListener('click', (e) => {
-//   const link = e.target.closest('.submenu > a');
-
-//   if (link && width <= 1200) {
-//     e.preventDefault();
-//     link.closest('.submenu').classList.toggle('is-active');
-//   }
-// });
-

@@ -64,11 +64,9 @@ class Menu {
       this.html.classList.remove('disable-scroll');
     }
 
-
     if (this.options.animate) {
       await waitFor(this.options.transitionDelay);
     }
-
 
     this.options.overlay.style.display = '';
     this.options.menu.style.display = '';
