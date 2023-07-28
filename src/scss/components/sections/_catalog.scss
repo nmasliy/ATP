@@ -11,8 +11,40 @@
     @include grid(2, 40px);
   }
 
+  &__subcategories {
+    margin-bottom: 30px;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -10px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      padding: 13px 10px;
+      width: 200px;
+    }
+
+    img {
+      flex-shrink: 0;
+      vertical-align: middle;
+      margin-right: 10px;
+      width: 50px;
+      height: 50px;
+    }
+
+    li {
+      margin: 10px;
+      border: 1px solid #e3e3e3;
+      border-radius: 7px;
+      background: $white-color;
+    }
+  }
+
   &__title {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   &__filter {
@@ -122,10 +154,12 @@
 
 @media screen and (max-width: $menu-breakpoint) {
   .catalog {
+    &__menu {
+      display: none;
+    }
+
     &__inner {
-      display: flex;
-      flex-direction: column-reverse;
-      gap: 0;
+      display: block;
     }
 
     &__categories {
@@ -144,6 +178,30 @@
 
 @media screen and (max-width: 768px) {
   .catalog {
+    &__subcategories {
+      ul {
+        margin: -5px;
+      }
+
+      img {
+        display: none;
+      }
+
+      a {
+        display: block;
+        padding: 5px 12px;
+        width: auto;
+        height: auto;
+      }
+
+      li {
+        margin: 5px;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: center;
+      }
+    }
+
     &__body {
       padding: 0;
     }
@@ -217,10 +275,6 @@
 
 @media screen and (max-width: 575px) {
   .catalog {
-    &__list {
-      grid-template-columns: 1fr;
-    }
-
     &__categories {
       grid-template-columns: 1fr;
     }

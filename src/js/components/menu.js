@@ -22,13 +22,13 @@ const menu = new Menu({
 moveElementOnBreakpoint(
   '.header__body-items',
   { fromSelector: '.header__logo', fromPosition: 'afterend' },
-  { toSelector: '.burger-menu', toPosition: 'beforeend' },
+  { toSelector: '.burger-menu__footer', toPosition: 'beforebegin' },
   1200
 );
 moveElementOnBreakpoint(
   '.header__top-inner',
   { fromSelector: '.header__top .container', fromPosition: 'afterbegin' },
-  { toSelector: '.burger-menu', toPosition: 'beforeend' },
+  { toSelector: '.burger-menu__footer', toPosition: 'beforebegin' },
   1200
 );
 moveElementOnBreakpoint(
@@ -37,6 +37,24 @@ moveElementOnBreakpoint(
   { toSelector: '.burger', toPosition: 'beforebegin' },
   1200
 );
+
+function initCityPicker() {
+  const cityPicker = document.querySelector('.header__city-picker');
+
+  if (!cityPicker) return;
+
+  document.body.addEventListener('click', function(e) {
+    const cityCurrent = e.target.closest('.header__city');
+
+    if (cityCurrent) {
+      cityPicker.classList.toggle('is-active');
+    } else {
+      cityPicker.classList.remove('is-active');
+    }
+
+  })
+
+}
 
 function toggleHeader() {
 
@@ -49,5 +67,7 @@ function toggleHeader() {
 }
 
 document.addEventListener('scroll', throttle(toggleHeader));
+
+initCityPicker();
 
 export default menu;

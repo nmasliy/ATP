@@ -3,12 +3,22 @@
     <div class="header__top">
       <div class="container">
         <div class="header__top-inner">
-          <div class="header__city">Владивосток</div>
+          <div class="header__city-picker">
+            <div class="header__city">Владивосток</div>
+            <div class="header__city-content">
+              <ul>
+                <li class="is-active"><a href="./">Владивосток</a></li>
+                <li><a href="./">Хабаровск</a></li>
+                <li><a href="./">Благовещенск</a></li>
+                <li><a href="./">Москва</a></li>
+              </ul>
+            </div>
+          </div>
           <nav class="header__nav">
             {% include "../common/nav.njk" %}
           </nav>
           <div class="header__contacts">
-            <a class="header__phone" href="tel:+79141718208">+7 914 171 82 08</a>
+            <a class="header__phone" href="tel:+79141718208"> +7 (914) 171-82-08</a>
             <a class="header__whatsapp" href="#">WhatsApp</a>
           </div>
         </div>
@@ -19,7 +29,8 @@
         <div class="header__body-inner">
           <div class="header__logo">
             <a href="./">
-              <img src="img/logo.png" width="150" height="75" alt="Логотип">
+              <img class="header__logo-desktop" src="img/logo.png" width="150" height="75" alt="Логотип">
+              <img class="header__logo-mobile" src="img/logo-mobile.png" width="89" height="30" alt="Логотип">
             </a>
           </div>
           <div class="header__body-items">
@@ -63,7 +74,6 @@
             <li><a href="#">Тормозная система и колеса</a></li>
           </ul>
           <ul>
-            <li><a href="#">Турбины и комплектующие</a></li>
             <li><a href="#">Фитинги и адаптеры</a></li>
             <li><a href="#">Экстерьер</a></li>
             <li><a href="#">Электроника и датчики</a></li>
@@ -75,6 +85,17 @@
   </div>
 
   <div class="burger-menu">
+    <div class="burger-menu__footer">
+      <p class="burger-menu__footer-item">ул. Выселковая, 30</p>
+      <div class="burger-menu__footer-item">
+        <p><a href="tel:+79025556999">+7 (902) 555-69-99</a></p>
+        <p><a href="mailto:info@atp-shop.ru">info@atp-shop.ru</a></p>
+      </div>
+      <div class="burger-menu__caption">Режим работы</div>
+      <p>ПН-ПТ 9:00-19:00</p>
+      <p>СБ: 10:00-17:00</p>
+      <p>ВС: 11:00-17:00</p>
+    </div>
   </div>
 
   <div class="header-catalog-overlay overlay"></div>

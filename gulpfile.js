@@ -155,9 +155,9 @@ const html = () => {
     .pipe(nunjucksRender({
       path: [`${paths.htmlFolder}/templates`]
     }))
-    .pipe(typograf({
-      locale: ['ru', 'en-US']
-    }))
+    // .pipe(typograf({
+    //   locale: ['ru', 'en-US']
+    // }))
     .pipe(dest(buildFolder))
     .pipe(browserSync.stream());
 };

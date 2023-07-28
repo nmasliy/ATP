@@ -100,10 +100,6 @@
                 <option value="3">Магазин 3</option>
               </select>
             </div>
-            <div class="catalog__icons">
-              <button class="catalog__icon is-active"><img src="img/catalog-type-1.svg" alt="Вид: сетка"></button>
-              <button class="catalog__icon"><img src="img/catalog-type-2.svg" alt="Вид: список"></button>
-            </div>
           </div>
           <ul class="catalog__list">
             <li class="product-card">
@@ -112,7 +108,24 @@
                 <div class="product-card__banner product-card__banner--red">Скидка</div>
               </a>
               <div class="product-card__content">
-                <div class="product-card__stock">В наличии в другом городе</div>
+                <div class="product-card__stock"><span data-text="В наличии">Есть в наличии </span>
+                  <div class="product-card__modal">
+                    <ul>
+                      <li class="product-card__modal-item">
+                        <div>Хабаровск</div>
+                        <span>ул. Индустриальная 1Б, ТЦ Универсал. Место №18</span>
+                      </li>
+                      <li class="product-card__modal-item product-card__modal-item--no">
+                        <div>Благовещенск</div>
+                        <span>ул. Воронкова 1</span>
+                      </li>
+                      <li class="product-card__modal-item">
+                        <div>Москва</div>
+                        <span>ул. Южнопортовая 22с1, 2 этаж, павильон 206в</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
                 <a class="product-card__title" href="#">V-band хомут с фланцами быстросъемный 4" (102мм) с проточкой,
                   нержа</a>
                 <div class="product-card__footer">
@@ -133,7 +146,24 @@
                 <div class="product-card__banner">Новинка</div>
               </a>
               <div class="product-card__content">
-                <div class="product-card__stock">В наличии во Владивостоке</div>
+                <div class="product-card__stock"><span data-text="В наличии">Есть в наличии </span>
+                  <div class="product-card__modal">
+                    <ul>
+                      <li class="product-card__modal-item">
+                        <div>Хабаровск</div>
+                        <span>ул. Индустриальная 1Б, ТЦ Универсал. Место №18</span>
+                      </li>
+                      <li class="product-card__modal-item product-card__modal-item--no">
+                        <div>Благовещенск</div>
+                        <span>ул. Воронкова 1</span>
+                      </li>
+                      <li class="product-card__modal-item">
+                        <div>Москва</div>
+                        <span>ул. Южнопортовая 22с1, 2 этаж, павильон 206в</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
                 <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
                 <div class="product-card__footer">
                   <div class="product-card__price">420 ₽</div>
@@ -149,13 +179,13 @@
                 <img src="img/catalog-2.jpg" width="260" height="200" alt="">
               </a>
               <div class="product-card__content">
-                <div class="product-card__stock product-card__stock--no">Нет в наличии</div>
+                <div class="product-card__stock product-card__stock--no" data-text="Нет в наличии">Нет в наличии</div>
                 <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
                 <div class="product-card__footer">
                   <div class="product-card__price">420 ₽</div>
                   <div class="product-card__icons">
                     <button class="product-card__icon icon-wishlist"></button>
-                    <button class="product-card__icon icon-cart"></button>
+                    <button class="product-card__icon icon-cart-disabled" disabled></button>
                   </div>
                 </div>
               </div>
@@ -165,30 +195,13 @@
                 <img src="img/catalog-2.jpg" width="260" height="200" alt="">
               </a>
               <div class="product-card__content">
-                <div class="product-card__stock product-card__stock--no">Нет в наличии</div>
+                <div class="product-card__stock product-card__stock--no" data-text="Нет в наличии">Нет в наличии</div>
                 <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
                 <div class="product-card__footer">
                   <div class="product-card__price">420 ₽</div>
                   <div class="product-card__icons">
                     <button class="product-card__icon icon-wishlist"></button>
-                    <button class="product-card__icon icon-cart"></button>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="product-card">
-              <a class="product-card__img" href="#">
-                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
-                <div class="product-card__banner">Новинка</div>
-              </a>
-              <div class="product-card__content">
-                <div class="product-card__stock">В наличии во Владивостоке</div>
-                <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
-                <div class="product-card__footer">
-                  <div class="product-card__price">420 ₽</div>
-                  <div class="product-card__icons">
-                    <button class="product-card__icon icon-wishlist"></button>
-                    <button class="product-card__icon icon-cart is-active"></button>
+                    <button class="product-card__icon icon-cart-disabled" disabled></button>
                   </div>
                 </div>
               </div>
@@ -199,89 +212,24 @@
                 <div class="product-card__banner">Новинка</div>
               </a>
               <div class="product-card__content">
-                <div class="product-card__stock">В наличии во Владивостоке</div>
-                <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
-                <div class="product-card__footer">
-                  <div class="product-card__price">420 ₽</div>
-                  <div class="product-card__icons">
-                    <button class="product-card__icon icon-wishlist"></button>
-                    <button class="product-card__icon icon-cart is-active"></button>
+                <div class="product-card__stock"><span data-text="В наличии">Есть в наличии </span>
+                  <div class="product-card__modal">
+                    <ul>
+                      <li class="product-card__modal-item">
+                        <div>Хабаровск</div>
+                        <span>ул. Индустриальная 1Б, ТЦ Универсал. Место №18</span>
+                      </li>
+                      <li class="product-card__modal-item product-card__modal-item--no">
+                        <div>Благовещенск</div>
+                        <span>ул. Воронкова 1</span>
+                      </li>
+                      <li class="product-card__modal-item">
+                        <div>Москва</div>
+                        <span>ул. Южнопортовая 22с1, 2 этаж, павильон 206в</span>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-              </div>
-            </li>
-            <li class="product-card">
-              <a class="product-card__img" href="#">
-                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
-                <div class="product-card__banner">Новинка</div>
-              </a>
-              <div class="product-card__content">
-                <div class="product-card__stock">В наличии во Владивостоке</div>
-                <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
-                <div class="product-card__footer">
-                  <div class="product-card__price">420 ₽</div>
-                  <div class="product-card__icons">
-                    <button class="product-card__icon icon-wishlist"></button>
-                    <button class="product-card__icon icon-cart is-active"></button>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="product-card">
-              <a class="product-card__img" href="#">
-                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
-              </a>
-              <div class="product-card__content">
-                <div class="product-card__stock product-card__stock--no">Нет в наличии</div>
-                <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
-                <div class="product-card__footer">
-                  <div class="product-card__price">420 ₽</div>
-                  <div class="product-card__icons">
-                    <button class="product-card__icon icon-wishlist"></button>
-                    <button class="product-card__icon icon-cart"></button>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="product-card">
-              <a class="product-card__img" href="#">
-                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
-              </a>
-              <div class="product-card__content">
-                <div class="product-card__stock product-card__stock--no">Нет в наличии</div>
-                <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
-                <div class="product-card__footer">
-                  <div class="product-card__price">420 ₽</div>
-                  <div class="product-card__icons">
-                    <button class="product-card__icon icon-wishlist"></button>
-                    <button class="product-card__icon icon-cart"></button>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="product-card">
-              <a class="product-card__img" href="#">
-                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
-              </a>
-              <div class="product-card__content">
-                <div class="product-card__stock product-card__stock--no">Нет в наличии</div>
-                <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
-                <div class="product-card__footer">
-                  <div class="product-card__price">420 ₽</div>
-                  <div class="product-card__icons">
-                    <button class="product-card__icon icon-wishlist"></button>
-                    <button class="product-card__icon icon-cart"></button>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="product-card">
-              <a class="product-card__img" href="#">
-                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
-                <div class="product-card__banner">Новинка</div>
-              </a>
-              <div class="product-card__content">
-                <div class="product-card__stock">В наличии во Владивостоке</div>
                 <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
                 <div class="product-card__footer">
                   <div class="product-card__price">420 ₽</div>
@@ -298,7 +246,174 @@
                 <div class="product-card__banner">Новинка</div>
               </a>
               <div class="product-card__content">
-                <div class="product-card__stock">В наличии во Владивостоке</div>
+                <div class="product-card__stock"><span data-text="В наличии">Есть в наличии </span>
+                  <div class="product-card__modal">
+                    <ul>
+                      <li class="product-card__modal-item">
+                        <div>Хабаровск</div>
+                        <span>ул. Индустриальная 1Б, ТЦ Универсал. Место №18</span>
+                      </li>
+                      <li class="product-card__modal-item product-card__modal-item--no">
+                        <div>Благовещенск</div>
+                        <span>ул. Воронкова 1</span>
+                      </li>
+                      <li class="product-card__modal-item">
+                        <div>Москва</div>
+                        <span>ул. Южнопортовая 22с1, 2 этаж, павильон 206в</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart is-active"></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+                <div class="product-card__banner">Новинка</div>
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock"><span data-text="В наличии">Есть в наличии </span>
+                  <div class="product-card__modal">
+                    <ul>
+                      <li class="product-card__modal-item">
+                        <div>Хабаровск</div>
+                        <span>ул. Индустриальная 1Б, ТЦ Универсал. Место №18</span>
+                      </li>
+                      <li class="product-card__modal-item product-card__modal-item--no">
+                        <div>Благовещенск</div>
+                        <span>ул. Воронкова 1</span>
+                      </li>
+                      <li class="product-card__modal-item">
+                        <div>Москва</div>
+                        <span>ул. Южнопортовая 22с1, 2 этаж, павильон 206в</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart is-active"></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock product-card__stock--no" data-text="Нет в наличии">Нет в наличии</div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart-disabled" disabled></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock product-card__stock--no" data-text="Нет в наличии">Нет в наличии</div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart-disabled" disabled></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock product-card__stock--no" data-text="Нет в наличии">Нет в наличии</div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart-disabled" disabled></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+                <div class="product-card__banner">Новинка</div>
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock"><span data-text="В наличии">Есть в наличии </span>
+                  <div class="product-card__modal">
+                    <ul>
+                      <li class="product-card__modal-item">
+                        <div>Хабаровск</div>
+                        <span>ул. Индустриальная 1Б, ТЦ Универсал. Место №18</span>
+                      </li>
+                      <li class="product-card__modal-item product-card__modal-item--no">
+                        <div>Благовещенск</div>
+                        <span>ул. Воронкова 1</span>
+                      </li>
+                      <li class="product-card__modal-item">
+                        <div>Москва</div>
+                        <span>ул. Южнопортовая 22с1, 2 этаж, павильон 206в</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
+                <div class="product-card__footer">
+                  <div class="product-card__price">420 ₽</div>
+                  <div class="product-card__icons">
+                    <button class="product-card__icon icon-wishlist"></button>
+                    <button class="product-card__icon icon-cart is-active"></button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="product-card">
+              <a class="product-card__img" href="#">
+                <img src="img/catalog-2.jpg" width="260" height="200" alt="">
+                <div class="product-card__banner">Новинка</div>
+              </a>
+              <div class="product-card__content">
+                <div class="product-card__stock"><span data-text="В наличии">Есть в наличии </span>
+                  <div class="product-card__modal">
+                    <ul>
+                      <li class="product-card__modal-item">
+                        <div>Хабаровск</div>
+                        <span>ул. Индустриальная 1Б, ТЦ Универсал. Место №18</span>
+                      </li>
+                      <li class="product-card__modal-item product-card__modal-item--no">
+                        <div>Благовещенск</div>
+                        <span>ул. Воронкова 1</span>
+                      </li>
+                      <li class="product-card__modal-item">
+                        <div>Москва</div>
+                        <span>ул. Южнопортовая 22с1, 2 этаж, павильон 206в</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
                 <a class="product-card__title" href="#">V-band хомут стальной 2"– 51мм</a>
                 <div class="product-card__footer">
                   <div class="product-card__price">420 ₽</div>

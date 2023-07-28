@@ -10,7 +10,7 @@
 
 
 <body>
-  <div class="page-wrapper">
+  <div class="page-wrapper {{ 'overflow-visible' if overflowVisible == true }}">
     {% block header %}
     {% include "../base/header.njk" %}
     {% endblock %}

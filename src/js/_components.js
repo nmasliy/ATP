@@ -8,3 +8,4 @@ import './components/selects';
 import './components/header-catalog';
 import './components/catalog';
 import './components/product';
+import './components/cart';

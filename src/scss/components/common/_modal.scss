@@ -33,12 +33,90 @@
     height: auto;
     max-width: 760px;
     background-color: $white-color;
+
+    &--sm {
+      max-width: 560px;
+    }
+  }
+
+  &__form-register {
+    a {
+      font-weight: 600;
+      text-decoration: underline;
+
+      @include hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__form-caption {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #8e8b8b;
+
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__socials {
+    margin-top: 50px;
+    text-align: center;
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: center;
+    }
+
+    li {
+      @include mr(15px);
+    }
+
+    a {
+      @include hover {
+        svg {
+          opacity: 1;
+          filter: grayscale(0);
+        }
+      }
+    }
+
+    svg {
+      opacity: 0.35;
+      filter: grayscale(1);
+      transition: $transition;
+    }
+  }
+
+  &__box {
+    margin: 0 auto;
+    max-width: 300px;
+
+    .btn {
+      max-width: 100%;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__form-item {
+    margin-bottom: 20px;
   }
 
   &__title {
     margin-bottom: 30px;
     font-family: $font-secondary;
     font-weight: 700;
+    font-style: italic;
     font-size: 24px;
     line-height: 1.25;
     text-align: center;
@@ -89,7 +167,7 @@
   &__form-items {
     @include grid(2, 20px 40px);
 
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   &__form-btn {

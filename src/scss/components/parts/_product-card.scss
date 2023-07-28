@@ -19,6 +19,7 @@
   }
 
   &__stock {
+    position: relative;
     display: inline-block;
     align-self: flex-start;
     margin-bottom: 10px;
@@ -31,11 +32,86 @@
     background: url("../img/check-icon-green.svg") left 6px center / 11px no-repeat;
     background-color: #dbf8d8;
 
+    &:not(.product-card__stock--no) > span {
+      border-bottom: 1px dashed #82cf79;
+      cursor: pointer;
+    }
+
     &--no {
       color: $white-color;
       background-image: url("../img/cross-icon.svg");
       background-size: 10px;
       background-color: #b9b9b9;
+    }
+
+    @include hover {
+      .product-card__modal {
+        display: block;
+      }
+    }
+  }
+
+  &__modal {
+    position: absolute;
+    left: -10px;
+    top: 100%;
+    z-index: 8;
+    display: none;
+    padding-top: 5px;
+    font-weight: 400;
+
+    > ul {
+      position: relative;
+      border: 1px solid #e1e1e1;
+      border-radius: 7px;
+      padding: 10px 20px;
+      width: 260px;
+      color: $black-color;
+      background-color: $white-color;
+      filter: drop-shadow(0 10px 20px rgba(21, 25, 37, 15%));
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: -9px;
+        width: 18px;
+        height: 10px;
+        background: url("../img/city-triangle.svg") center no-repeat;
+        transform: translateX(-50%);
+      }
+    }
+
+    &-item {
+      position: relative;
+      border-bottom: 1px solid #e3e3e3;
+      padding: 10px 20px 10px 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 10px;
+        width: 15px;
+        height: 15px;
+        background: url("../img/check-icon-green.svg") center / 14px  no-repeat;
+      }
+
+      span {
+        font-size: 13px;
+        color: #a8a5a5;
+      }
+
+      &:last-child {
+        border: none;
+      }
+
+      &--no {
+        &::after {
+          background-image: url("../img/cross-icon-grey.svg");
+          background-size: 11px;
+        }
+      }
     }
   }
 
@@ -130,25 +206,68 @@
     transition: border-color $transition;
     cursor: pointer;
 
+    &:not(:disabled) {
+      @include hover {
+        border-color: $green-color;
+
+        &.icon-wishlist {
+          border-color: $primary-color;
+        }
+      }
+    }
+
     &.is-active {
       background: url("../img/check-icon-white.svg") center / 22px no-repeat;
       background-color: $green-color;
-    }
-
-    @include hover {
-      border-color: $green-color;
     }
   }
 }
 
 @media screen and (max-width: 1200px) {
   .product-card {
+    &__stock {
+      &.is-active {
+        .product-card__modal {
+          display: block;
+        }
+      }
+    }
+
     &__content {
       padding: 20px 14px;
     }
 
     &__price {
       font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .product-card {
+    &__stock {
+      span {
+        font-size: 0;
+
+        &::before {
+          content: attr(data-text);
+          font-size: 13px;
+        }
+      }
+    }
+
+    &__footer {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    &__icons {
+      justify-content: space-between;
+    }
+
+    &__prices,
+    &__price {
+      margin-bottom: 12px;
     }
   }
 }

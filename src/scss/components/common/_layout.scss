@@ -3,6 +3,10 @@
 
   overflow: hidden;
   padding-top: var(--header-height);
+
+  &.overflow-visible {
+    overflow: visible;
+  }
 }
 
 .page-offset-b {
@@ -43,6 +47,7 @@
 .title {
   font-family: $font-secondary;
   font-weight: 700;
+  font-style: italic;
   font-size: 48px;
   line-height: 1.04;
   text-transform: uppercase;

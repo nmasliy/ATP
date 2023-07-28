@@ -8,7 +8,7 @@
   }
 
   &__head {
-    @include grid(2, 10px);
+    @include grid(3, 10px);
 
     margin-bottom: 40px;
   }
@@ -57,6 +57,7 @@
     width: min-content;
     font-family: $font-secondary;
     font-weight: 700;
+    font-style: italic;
     font-size: 24px;
     line-height: 1.25;
     text-transform: uppercase;
@@ -89,7 +90,8 @@
   }
 
   .categories {
-    &__list {
+    &__list,
+    &__head {
       gap: 24px;
     }
   }
@@ -107,7 +109,12 @@
   }
 
   .categories {
-    &__list {
+    &__info {
+      grid-column: span 2;
+    }
+
+    &__list,
+    &__head {
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -125,6 +132,10 @@
     &__head {
       display: block;
       margin-bottom: 16px;
+
+      > div {
+        @include mb(16px);
+      }
     }
 
     &__info {
