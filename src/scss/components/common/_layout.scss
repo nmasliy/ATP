@@ -54,6 +54,10 @@
   color: $dark-color;
 }
 
+.color-primary {
+  color: $primary-color;
+}
+
 .check-list {
   li {
     @include mb(10px);

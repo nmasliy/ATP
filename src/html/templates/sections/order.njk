@@ -1,0 +1,363 @@
+<section class="order">
+  <div class="container">
+    <div class="breadcrumbs">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Корзина</a></li>
+        <li><a href="#">Оформление заказа</a></li>
+      </ul>
+    </div>
+    <div class="order__inner">
+      <h1 class="order__title title">Оформление заказа</h1>
+      <form class="form-primary" action="">
+        <div class="order-content">
+          <div class="order-body">
+            <div class="order__box">
+              <ul class="order__tabs">
+                <li class="is-active" role="button" tabindex="0" data-tabs="1">Регистрация пользователя</li>
+                <li role="button" tabindex="0" data-tabs="2">Регистрация организации</li>
+              </ul>
+            </div>
+            <div class="order__content">
+              <div class="order__tabs-content is-active" data-tabs="1">
+                <div class="order__box">
+                  <h3 class="form-primary__title">Данные покупателя</h3>
+                  <label class="form-primary__item form-item">
+                    <span class="form-item__caption">ФИО <span>*</span></span>
+                    <input class="form-input" type="text" value="Константинопольский Константин Константинович">
+                  </label>
+                  <label class="form-primary__item form-item">
+                    <span class="form-item__caption">Email <span>*</span></span>
+                    <input class="form-input" type="text" value="Konstantin@gmail.com">
+                  </label>
+                  <label class="form-primary__item form-item">
+                    <span class="form-item__caption">Телефон <span>*</span></span>
+                    <input class="form-input form-input--w-auto" type="text" value="+7 (999) 888-77-66">
+                  </label>
+                </div>
+                <div class="order__box">
+                  <div class="form-primary__title">Адрес доставки</div>
+                  <label class="form-primary__item form-item">
+                    <span class="form-item__caption">Область <span>*</span></span>
+                    <input class="form-input" type="text" placeholder="Укажите область">
+                  </label>
+                  <label class="form-primary__item form-item">
+                    <span class="form-item__caption">Город/населённый пункт <span>*</span></span>
+                    <input class="form-input" type="text" placeholder="Название города">
+                  </label>
+                  <div class="form-primary__row">
+                    <label class="form-primary__item form-item">
+                      <span class="form-item__caption">Улица</span>
+                      <input class="form-input" type="text" placeholder="Название улицы">
+                    </label>
+                    <label class="form-primary__item form-item">
+                      <span class="form-item__caption">№ дома</span>
+                      <input class="form-input" type="text" placeholder="№ дома">
+                    </label>
+                    <label class="form-primary__item form-item">
+                      <span class="form-item__caption">№ квартиры</span>
+                      <input class="form-input" type="text" placeholder="№ кв">
+                    </label>
+                  </div>
+                  <label class="form-item">
+                    <span class="form-item__caption">Комментарий</span>
+                    <textarea class="form-input" placeholder="Комментарий к заказу, например, как проехать"></textarea>
+                  </label>
+                </div>
+                <div class="order__box form-boxes">
+                  <div class="form-primary__title">Способ доставки</div>
+                  <div class="form-box form-box--expand is-active">
+                    <label class="form-radio">
+                      <input type="radio" value="1" name="deliveryType" checked>
+                      <span class="form-radio__circle"></span>
+                      <span class="form-radio__text">Транспортными компаниями</span>
+                    </label>
+                    <div class="form-box__hidden">
+                      <label class="form-item">
+                        <span class="form-item__caption">Выберите транспортную компанию</span>
+                        <div class="order__select form-select">
+                          <select>
+                            <option value="1">Деловые линии</option>
+                            <option value="2">Деловые линии2</option>
+                            <option value="3">Деловые линии3</option>
+                          </select>
+                        </div>
+                      </label>
+                      <p class="form-box__caption">Наземная доставка грузов по РФ. Цены от 500 руб./кг. Доставка
+                        оплачивается отдельно. Точную
+                        стоимость можно рассчитать в калькуляторе: <a href="https://nrg-tk.ru/client/calculator/"
+                          target="_blank">https://nrg-tk.ru/client/calculator/</a></p>
+                      <label class="form-checkbox form-checkbox__dark">
+                        <input type="checkbox">
+                        <span class="form-checkbox__box"></span>
+                        <span class="form-checkbox__text">Дополнительная упаковка от магазина (пузырчатая пленка +
+                          картон)
+                          —
+                          300
+                          руб.</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-box form-box--expand">
+                    <label class="form-radio">
+                      <input type="radio" value="2" name="deliveryType">
+                      <span class="form-radio__circle"></span>
+                      <span class="form-radio__text">Самовывоз</span>
+                    </label>
+                    <div class="form-box__hidden">
+                      <div class="form-box__subtitle">Выберите пункт вывоза</div>
+                      <label class="form-card">
+                        <input checked type="radio" name="pickupPoint" value="1">
+                        <span class="form-card__img">
+                          <img src="img/order-delivery-1.png" width="60" height="50" alt="">
+                        </span>
+                        <span class="form-card__content">
+                          <span class="form-card__title">Владивосток, ул. Выселковая, 30</span>
+                          <span class="form-card__info">+7 (902) 555-69-99 (режим работы ПН-ПТ 9:00-19:00, СБ:
+                            10:00-17:00,
+                            ВС: 11:00-17:00)</span>
+                        </span>
+                        <span class="form-card__bg"></span>
+                      </label>
+                      <label class="form-card">
+                        <input type="radio" name="pickupPoint" value="2">
+                        <span class="form-card__img">
+                          <img src="img/order-delivery-2.png" width="60" height="50" alt="">
+                        </span>
+                        <span class="form-card__content">
+                          <span class="form-card__title">Москва, ул. Южнопортовая 22с1, 2 этаж, павильон 206в</span>
+                          <span class="form-card__info">+7 (902) 555-69-99 (режим работы ПН-ПТ 9:00-19:00, СБ:
+                            10:00-17:00,
+                            ВС: 11:00-17:00)</span>
+                        </span>
+                        <span class="form-card__bg"></span>
+                      </label>
+                      <label class="form-card">
+                        <input type="radio" name="pickupPoint" value="3">
+                        <span class="form-card__img">
+                          <img src="img/order-delivery-3.png" width="60" height="50" alt="">
+                        </span>
+                        <span class="form-card__content">
+                          <span class="form-card__title">Хабаровск, ул. Индустриальная 1Б, ТЦ Универсал. Место
+                            №18</span>
+                          <span class="form-card__info">+7 (902) 555-69-99 (режим работы ПН-ПТ 9:00-19:00, СБ:
+                            10:00-17:00,
+                            ВС: 11:00-17:00)</span>
+                        </span>
+                        <span class="form-card__bg"></span>
+                      </label>
+                      <label class="form-card">
+                        <input type="radio" name="pickupPoint" value="4">
+                        <span class="form-card__img">
+                          <img src="img/order-delivery-4.png" width="60" height="50" alt="">
+                        </span>
+                        <span class="form-card__content">
+                          <span class="form-card__title">Благовещенск, ул. Воронкова 1</span>
+                          <span class="form-card__info">+7 (902) 555-69-99 (режим работы ПН-ПТ 9:00-19:00, СБ:
+                            10:00-17:00,
+                            ВС: 11:00-17:00)</span>
+                        </span>
+                        <span class="form-card__bg"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-box">
+                    <label class="form-radio">
+                      <input type="radio" value="3" name="deliveryType">
+                      <span class="form-radio__circle"></span>
+                      <span class="form-radio__text">Доставка по городу</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="order__box form-boxes">
+                  <div class="form-primary__title">Способ оплаты</div>
+                  <div class="form-box">
+                    <label class="form-radio">
+                      <input type="radio" value="1" name="paymentType" checked>
+                      <span class="form-radio__circle"></span>
+                      <span class="form-radio__text">Онлайн-оплата картой </span>
+                    </label>
+                  </div>
+                  <div class="form-box">
+                    <label class="form-radio">
+                      <input type="radio" value="2" name="paymentType">
+                      <span class="form-radio__circle"></span>
+                      <span class="form-radio__text">Картой Сбербанк, Тинькофф, ВТБ (перевод) </span>
+                    </label>
+                  </div>
+                  <div class="form-box">
+                    <label class="form-radio">
+                      <input type="radio" value="3" name="paymentType">
+                      <span class="form-radio__circle"></span>
+                      <span class="form-radio__text">По счёту</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="order__tabs-content" data-tabs="2">
+                <div class="order__box form-boxes">
+                  <div class="form-primary__title">Способ доставки</div>
+                  <div class="form-box form-box--expand is-active">
+                    <label class="form-radio">
+                      <input type="radio" value="1" name="deliveryTypeCompany" checked>
+                      <span class="form-radio__circle"></span>
+                      <span class="form-radio__text">Транспортными компаниями</span>
+                    </label>
+                    <div class="form-box__hidden">
+                      <label class="form-item">
+                        <span class="form-item__caption">Выберите транспортную компанию</span>
+                        <div class="order__select form-select">
+                          <select>
+                            <option value="1">Деловые линии</option>
+                            <option value="2">Деловые линии2</option>
+                            <option value="3">Деловые линии3</option>
+                          </select>
+                        </div>
+                      </label>
+                      <p class="form-box__caption">Наземная доставка грузов по РФ. Цены от 500 руб./кг. Доставка
+                        оплачивается отдельно. Точную
+                        стоимость можно рассчитать в калькуляторе: <a href="https://nrg-tk.ru/client/calculator/"
+                          target="_blank">https://nrg-tk.ru/client/calculator/</a></p>
+                      <label class="form-checkbox form-checkbox__dark">
+                        <input type="checkbox">
+                        <span class="form-checkbox__box"></span>
+                        <span class="form-checkbox__text">Дополнительная упаковка от магазина (пузырчатая пленка +
+                          картон)
+                          —
+                          300
+                          руб.</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-box form-box--expand">
+                    <label class="form-radio">
+                      <input type="radio" value="2" name="deliveryTypeCompany">
+                      <span class="form-radio__circle"></span>
+                      <span class="form-radio__text">Самовывоз</span>
+                    </label>
+                    <div class="form-box__hidden">
+                      <div class="form-box__subtitle">Выберите пункт вывоза</div>
+                      <label class="form-card">
+                        <input checked type="radio" name="pickupPointCompany" value="1">
+                        <span class="form-card__img">
+                          <img src="img/order-delivery-1.png" width="60" height="50" alt="">
+                        </span>
+                        <span class="form-card__content">
+                          <span class="form-card__title">Владивосток, ул. Выселковая, 30</span>
+                          <span class="form-card__info">+7 (902) 555-69-99 (режим работы ПН-ПТ 9:00-19:00, СБ:
+                            10:00-17:00,
+                            ВС: 11:00-17:00)</span>
+                        </span>
+                        <span class="form-card__bg"></span>
+                      </label>
+                      <label class="form-card">
+                        <input type="radio" name="pickupPointCompany" value="2">
+                        <span class="form-card__img">
+                          <img src="img/order-delivery-2.png" width="60" height="50" alt="">
+                        </span>
+                        <span class="form-card__content">
+                          <span class="form-card__title">Москва, ул. Южнопортовая 22с1, 2 этаж, павильон 206в</span>
+                          <span class="form-card__info">+7 (902) 555-69-99 (режим работы ПН-ПТ 9:00-19:00, СБ:
+                            10:00-17:00,
+                            ВС: 11:00-17:00)</span>
+                        </span>
+                        <span class="form-card__bg"></span>
+                      </label>
+                      <label class="form-card">
+                        <input type="radio" name="pickupPointCompany" value="3">
+                        <span class="form-card__img">
+                          <img src="img/order-delivery-3.png" width="60" height="50" alt="">
+                        </span>
+                        <span class="form-card__content">
+                          <span class="form-card__title">Хабаровск, ул. Индустриальная 1Б, ТЦ Универсал. Место
+                            №18</span>
+                          <span class="form-card__info">+7 (902) 555-69-99 (режим работы ПН-ПТ 9:00-19:00, СБ:
+                            10:00-17:00,
+                            ВС: 11:00-17:00)</span>
+                        </span>
+                        <span class="form-card__bg"></span>
+                      </label>
+                      <label class="form-card">
+                        <input type="radio" name="pickupPointCompany" value="4">
+                        <span class="form-card__img">
+                          <img src="img/order-delivery-4.png" width="60" height="50" alt="">
+                        </span>
+                        <span class="form-card__content">
+                          <span class="form-card__title">Благовещенск, ул. Воронкова 1</span>
+                          <span class="form-card__info">+7 (902) 555-69-99 (режим работы ПН-ПТ 9:00-19:00, СБ:
+                            10:00-17:00,
+                            ВС: 11:00-17:00)</span>
+                        </span>
+                        <span class="form-card__bg"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-box">
+                    <label class="form-radio">
+                      <input type="radio" value="3" name="deliveryTypeCompany">
+                      <span class="form-radio__circle"></span>
+                      <span class="form-radio__text">Доставка по городу</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="order__box form-boxes">
+                  <div class="form-primary__title">Способ оплаты</div>
+                  <div class="form-box">
+                    <label class="form-radio">
+                      <input type="radio" value="1" name="paymentTypeCompany" checked>
+                      <span class="form-radio__circle"></span>
+                      <span class="form-radio__text">Онлайн-оплата картой </span>
+                    </label>
+                  </div>
+                  <div class="form-box">
+                    <label class="form-radio">
+                      <input type="radio" value="2" name="paymentTypeCompany">
+                      <span class="form-radio__circle"></span>
+                      <span class="form-radio__text">Картой Сбербанк, Тинькофф, ВТБ (перевод) </span>
+                    </label>
+                  </div>
+                  <div class="form-box">
+                    <label class="form-radio">
+                      <input type="radio" value="3" name="paymentTypeCompany">
+                      <span class="form-radio__circle"></span>
+                      <span class="form-radio__text">По счёту</span>
+                    </label>
+                  </div>
+                  <div class="form-box">
+                    <label class="form-radio">
+                      <input type="radio" value="4" name="paymentTypeCompany">
+                      <span class="form-radio__circle"></span>
+                      <span class="form-radio__text">Наличными</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="order-aside">
+            <div class="order-aside__title">Ваш заказ</div>
+            <table class="order-aside__table">
+              <tr>
+                <td>Количество</td>
+                <td>4 шт.</td>
+              </tr>
+              <tr>
+                <td>Скидка</td>
+                <td class="color-green"> -3 700 ₽</td>
+              </tr>
+              <tr class="order-aside__footer">
+                <td class="order-aside__result-caption">Итого</td>
+                <td class="order-aside__result-num">29 760 ₽</td>
+              </tr>
+            </table>
+            <div class="order-aside__field">
+              <input type="text" placeholder="Промокод">
+              <button class="order-aside__field-btn" disabled>Применить</button>
+            </div>
+            <button class="order-aside__btn btn"> Оформить заказ </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

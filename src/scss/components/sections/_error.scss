@@ -1,0 +1,23 @@
+.error {
+  &__inner {
+    padding: 90px 0 130px;
+    background: url("../img/404.png")  right bottom no-repeat;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    max-width: 640px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .error__inner {
+    background-size: 550px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .error__inner {
+    background-size: contain;
+  }
+}

@@ -21,14 +21,6 @@
     background-color: $bg-color;
   }
 
-  &__box-title {
-    margin-bottom: 25px;
-    font-family: $font-secondary;
-    font-weight: 700;
-    font-style: italic;
-    font-size: 24px;
-  }
-
   &__orders {
     background-color: $bg-color;
 
@@ -84,36 +76,6 @@
   }
 }
 
-.profile-form {
-  border-radius: 7px;
-  padding: 30px;
-  background-color: $white-color;
-
-  &__item {
-    @include mb(20px);
-
-    max-width: 440px;
-  }
-
-  &__btn {
-    width: 100%;
-    max-width: 440px;
-    background: $gradient;
-  }
-
-  &__row {
-    display: grid;
-    grid-template-columns: 1fr 130px 130px;
-    gap: 20px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .profile__box-title {
-    font-size: 22px;
-  }
-}
-
 @media screen and (max-width: $menu-breakpoint) {
   .profile {
     &__orders {
@@ -133,21 +95,10 @@
       gap: 20px;
     }
   }
-
-  .profile-form {
-    &__row {
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
 }
 
 @media screen and (max-width: 768px) {
   .profile {
-    &__box-title {
-      font-size: 20px;
-    }
-
     &__inner {
       display: block;
     }
@@ -214,10 +165,6 @@
 }
 
 @media screen and (max-width: 480px) {
-  .profile-form {
-    padding: 0;
-  }
-
   .profile {
     &__box {
       padding: 0;
