@@ -326,7 +326,7 @@
             <input type="checkbox">
             <span class="form-checkbox__box"></span>
             <span class="form-checkbox__text">Я согласен(-на) с <a href="#" target="_blank">политикой обработки
-                персональных данных</a> *</span>
+                персональных данных</a>&nbsp;*</span>
           </label>
         </form>
       </div>
@@ -477,6 +477,63 @@
               </li>
             </ul>
           </div>
+        </form>
+      </div>
+      <button class="modal__close" data-modal-close></button>
+    </div>
+  </div>
+</div>
+<div class="modal modal-buy" id="modal-certificate" aria-hidden="true">
+  <div class="modal__wrapper">
+    <div class="modal__inner">
+      <div class="modal__content">
+        <div class="modal__title modal__title--offset-sm">Оформление подарочного сертификата</div>
+        <div class="modal__text">
+          Введите необходимые данные. После оплаты, сертификат <br>
+          будет отправлен на email или телефон Получателя.
+        </div>
+        <div class="modal-buy__head">
+          <div class="modal-buy__img modal-buy__img--lg"><img src="img/certificate.png" width="70" height="40" alt="">
+          </div>
+          <div class="modal-buy__name">Подарочный сертификат на 5000 руб.</div>
+          <div class="modal-buy__counter counter">
+            <button class="counter__btn counter__btn--minus" type="button"></button>
+            <div class="counter__value">1</div>
+            <button class="counter__btn counter__btn--plus" type="button"></button>
+          </div>
+          <div class="modal-buy__price">5 000 ₽</div>
+        </div>
+
+        <form class="modal__form form" action="#">
+          <div class="modal__form-items">
+            <label class="form-item">
+              <span class="form-item__caption">Отправитель <span>*</span></span>
+              <input type="text" class="form-input" placeholder="Введите имя отправителя">
+            </label>
+            <label class="form-item">
+              <span class="form-item__caption">Email отправителя <span>*</span></span>
+              <input type="text" class="form-input" placeholder="Введите email отправителя">
+            </label>
+            <label class="form-item">
+              <span class="form-item__caption">Получатель <span>*</span></span>
+              <input type="text" class="form-input" placeholder="Введите имя получателя">
+            </label>
+            <label class="form-item">
+              <span class="form-item__caption">Email или телефон получателя <span>*</span></span>
+              <input type="text" class="form-input" placeholder="Введите контакт получателя">
+            </label>
+            <label class="modal__form-textarea form-item">
+              <span class="form-item__caption">Ваш комментарий</span>
+              <textarea class="form-input" placeholder="Ваш комментарий"></textarea>
+            </label>
+          </div>
+          <button class="modal__form-btn btn">перейти к Оплате</button>
+          <label class="form-checkbox">
+            <input type="checkbox">
+            <span class="form-checkbox__box"></span>
+            <span class="form-checkbox__text">Я согласен(-на) с <a href="#" target="_blank">политикой обработки
+                персональных данных</a>&nbsp;*</span>
+          </label>
         </form>
       </div>
       <button class="modal__close" data-modal-close></button>

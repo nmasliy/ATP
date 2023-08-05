@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>ATP - Профиль компании</title>
+<title>ATP - Регистрация</title>
 <link rel="stylesheet" href="css/vendor.css">
 <link rel="stylesheet" href="css/main.css">
 
@@ -17,7 +17,7 @@
 
 
 <body>
-  <div class="page-wrapper ">
+  <div class="page-wrapper overflow-visible">
     
     <header class="header">
   <div class="header__wrapper">
@@ -135,66 +135,104 @@
     <div class="main-content ">
       
 
-<section class="profile">
+<section class="registration order">
   <div class="container">
     <div class="breadcrumbs">
       <ul>
         <li><a href="#">Главная</a></li>
-        <li><a href="#">Личный кабинет</a></li>
-        <li><a href="#">Профиль компании</a></li>
+        <li><a href="#">Регистрация</a></li>
       </ul>
     </div>
-    <div class="profile__inner">
-      <div class="profile__content">
-        <h1 class="profile__title title">Профиль компании</h1>
-        <div class="profile__box">
-  <form class="form-primary form-primary--bg" action="#">
-    <div class="form-primary__title">Настройка личных данных</div>
-    <label class="form-primary__item form-item">
-      <span class="form-item__caption">Email <span>*</span></span>
-      <input class="form-input" type="text" value="Konstantin@gmail.com">
-    </label>
-    <label class="form-primary__item form-item">
-      <span class="form-item__caption">Телефон <span>*</span></span>
-      <input class="form-input form-input--sm" type="text" value="+7 (999) 888-77-66">
-    </label>
-    <label class="form-primary__item form-item">
-      <span class="form-item__caption">Название компании <span>*</span></span>
-      <input class="form-input" type="text" placeholder="ООО «Название компании»">
-    </label>
-    <label class="form-primary__item form-item">
-      <span class="form-item__caption">ИНН <span>*</span></span>
-      <input class="form-input" type="text" placeholder="Номер ИНН">
-    </label>
-    <label class="form-primary__item form-item">
-      <span class="form-item__caption">Юридический адрес</span>
-      <input class="form-input" type="text" placeholder="Город, индекс, улица, офис">
-    </label>
-    <label class="form-primary__item form-item">
-      <span class="form-item__caption">КПП</span>
-      <input class="form-input" type="text" placeholder="Номер КПП">
-    </label>
-    <label class="form-primary__item form-item">
-      <span class="form-item__caption">ОГРН/ОГРНИП</span>
-      <input class="form-input" type="text" placeholder="ОГРН/ОГРНИП">
-    </label>
-    <button class="form-primary__btn btn">Сохранить</button>
-  </form>
-</div>
-
+    <div class="order__inner">
+      <h1 class="order__title title">Регистрация</h1>
+      <div class="order-content">
+        <div class="order-body">
+          <div class="order__box">
+            <ul class="order__tabs order__tabs--offset">
+              <li class="is-active" role="button" tabindex="0" data-tabs="1">Регистрация пользователя</li>
+              <li role="button" tabindex="0" data-tabs="2">Регистрация организации</li>
+            </ul>
+            <div class="order__content">
+              <div class="order__tabs-content is-active" data-tabs="1">
+                <form class="form-primary" action="">
+                  <h3 class="form-primary__title">Регистрация пользователя</h3>
+                  <label class="form-primary__item form-item">
+                    <span class="form-item__caption">ФИО <span>*</span></span>
+                    <input class="form-input" type="text" value="Константинопольский Константин Константинович">
+                  </label>
+                  <label class="form-primary__item form-item">
+                    <span class="form-item__caption">Email <span>*</span></span>
+                    <input class="form-input" type="text" value="Konstantin@gmail.com">
+                  </label>
+                  <label class="form-primary__item form-item">
+                    <span class="form-item__caption">Телефон <span>*</span></span>
+                    <input class="form-input form-input--sm" type="text" value="+7 (999) 888-77-66">
+                  </label>
+                  <div class="form-primary__item form-primary__item--duo">
+                    <label class="form-item">
+                      <span class="form-item__caption">Введите пароль <span>*</span></span>
+                      <input class="form-input" type="password" placeholder="******">
+                    </label>
+                    <label class="form-item">
+                      <span class="form-item__caption">Подтвердите пароль <span>*</span></span>
+                      <input class="form-input" type="password" placeholder="******">
+                    </label>
+                  </div>
+                  <button class="registration__btn btn">Подтвердить регистрацию</button>
+                  <label class="form-checkbox">
+                    <input type="checkbox">
+                    <span class="form-checkbox__box"></span>
+                    <span class="form-checkbox__text">Я согласен(-на) с <a href="#" target="_blank">политикой обработки
+                        персональных данных</a>&nbsp;*</span>
+                  </label>
+                </form>
+              </div>
+              <div class="order__tabs-content" data-tabs="2">
+                <form class="form-primary" action="">
+                  <h3 class="form-primary__title">Регистрация организации</h3>
+                  <label class="form-primary__item form-item">
+                    <span class="form-item__caption">Email <span>*</span></span>
+                    <input class="form-input" type="text" value="Konstantin@gmail.com">
+                  </label>
+                  <label class="form-primary__item form-item">
+                    <span class="form-item__caption">Телефон <span>*</span></span>
+                    <input class="form-input form-input--sm" type="text" value="+7 (999) 888-77-66">
+                  </label>
+                  <div class="form-primary__item form-primary__item--duo">
+                    <label class="form-item">
+                      <span class="form-item__caption">Введите пароль <span>*</span></span>
+                      <input class="form-input" type="password" placeholder="******">
+                    </label>
+                    <label class="form-item">
+                      <span class="form-item__caption">Подтвердите пароль <span>*</span></span>
+                      <input class="form-input" type="password" placeholder="******">
+                    </label>
+                  </div>
+                  <label class="form-primary__item form-item">
+                    <span class="form-item__caption">Название компании <span>*</span></span>
+                    <input class="form-input" type="text" placeholder="ООО «Название компании»">
+                  </label>
+                  <label class="form-primary__item form-item">
+                    <span class="form-item__caption">ИНН <span>*</span></span>
+                    <input class="form-input" type="text" placeholder="Номер ИНН">
+                  </label>
+                  <button class="registration__btn btn">Подтвердить регистрацию</button>
+                  <label class="form-checkbox">
+                    <input type="checkbox">
+                    <span class="form-checkbox__box"></span>
+                    <span class="form-checkbox__text">Я согласен(-на) с <a href="#" target="_blank">политикой обработки
+                        персональных данных</a>&nbsp;*</span>
+                  </label>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <aside class="page-menu">
-        <ul>
-          <li><a href="profile-data.html">Личные данные</a></li>
-          <li class="is-active"><a href="profile-company.html">Профиль компании</a></li>
-          <li><a href="profile-delivery.html">Адрес доставки</a></li>
-          <li><a href="profile-orders.html">История заказов</a></li>
-        </ul>
-      </aside>
-
     </div>
   </div>
 </section>
+
 
 
     </div>

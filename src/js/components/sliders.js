@@ -99,3 +99,17 @@ const productSwiper = new Swiper('.product__slider', {
     swiper: productThumbs
   }
 })
+
+const aboutPageSliders = document.querySelectorAll('.about-page__images');
+
+aboutPageSliders.forEach(slider => {
+  const aboutSlider  = new Swiper(slider, {
+    spaceBetween: 30,
+    navigation: {
+      nextEl: slider.querySelector('.swiper-button-next'),
+      prevEl: slider.querySelector('.swiper-button-prev'),
+    },
+  })
+
+})
+

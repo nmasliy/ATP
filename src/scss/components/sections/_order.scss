@@ -52,6 +52,10 @@
         background-color: $primary-color;
       }
     }
+
+    &--offset {
+      margin-bottom: 30px;
+    }
   }
 
   &__box-info {
@@ -74,6 +78,14 @@
     &.is-active {
       display: block;
     }
+  }
+}
+
+.registration {
+  &__btn {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 440px;
   }
 }
 

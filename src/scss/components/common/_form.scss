@@ -59,8 +59,8 @@
     opacity: 1;
   }
 
-  &--w-auto {
-    width: auto;
+  &--sm {
+    width: 200px;
   }
 }
 
@@ -242,6 +242,12 @@ textarea.form-input {
     @include mb(20px);
 
     max-width: 440px;
+
+    &--duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
   }
 
   &__btn {
@@ -358,7 +364,23 @@ textarea.form-input {
 }
 
 @media screen and (max-width: 480px) {
-  .form-primary--bg {
-    padding: 0;
+  .form-input--sm {
+    width: 100%;
+  }
+
+  .form-primary {
+    &__item {
+      &--duo {
+        display: block;
+
+        > * {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &--bg {
+      padding: 0;
+    }
   }
 }

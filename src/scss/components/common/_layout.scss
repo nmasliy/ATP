@@ -54,6 +54,16 @@
   color: $dark-color;
 }
 
+.subtitle {
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  color: $dark-color;
+}
+
 .color-primary {
   color: $primary-color;
 }
@@ -67,14 +77,51 @@
   }
 }
 
+.page-inner {
+  padding-bottom: 70px;
+
+  &__content {
+    order: 3;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 260px auto;
+    gap: 40px;
+  }
+}
+
 @media screen and (max-width: $menu-breakpoint) {
+  .page-inner__row {
+    grid-template-columns: 200px auto;
+    gap: 20px;
+  }
+
   .title {
     font-size: 32px;
+  }
+
+  .subtitle {
+    font-size: 20px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .title {
     font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .page-inner {
+    &__row {
+      display: block;
+    }
+
+    &__content {
+      margin-bottom: 40px;
+    }
   }
 }

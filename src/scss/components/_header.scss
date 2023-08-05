@@ -91,6 +91,7 @@
   &__city-content {
     position: absolute;
     top: calc(100% + 20px);
+    z-index: 22;
     display: none;
     border: 1px solid #e1e1e1;
     border-radius: 7px;

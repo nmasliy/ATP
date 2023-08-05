@@ -41,6 +41,16 @@ button {
   font: inherit;
 }
 
+b,
+strong {
+  font-weight: 700;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
 @media screen and (max-width: 768px) {
   body {
     font-size: 14px;

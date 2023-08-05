@@ -120,6 +120,10 @@
     font-size: 24px;
     line-height: 1.25;
     text-align: center;
+
+    &--offset-sm {
+      margin-bottom: 20px;
+    }
   }
 
   &__table {
@@ -232,10 +236,19 @@
       vertical-align: middle;
       width: 40px;
     }
+
+    &--lg {
+      margin-right: 10px;
+
+      img {
+        width: 69px;
+      }
+    }
   }
 
   &__head {
     display: flex;
+    align-items: center;
     margin-bottom: 30px;
     border-bottom: 1px solid #d9d9d9;
     padding-bottom: 20px;
@@ -260,15 +273,24 @@
 
 @media screen and (max-width: 600px) {
   .modal-buy {
+    &__img {
+      margin-right: 10px;
+
+      &--lg img {
+        width: 40px;
+      }
+    }
+
     &__head {
       flex-wrap: wrap;
+      align-items: stretch;
       justify-content: center;
     }
 
     &__name {
       margin-right: 0;
       margin-bottom: 15px;
-      width: calc(100% - 60px);
+      width: calc(100% - 50px);
     }
   }
 
