@@ -52,6 +52,10 @@
   line-height: 1.04;
   text-transform: uppercase;
   color: $dark-color;
+
+  &--offset {
+    margin-bottom: 20px;
+  }
 }
 
 .subtitle {
