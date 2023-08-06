@@ -53,6 +53,12 @@
   &__arrow--next a {
     transform: rotate(180deg);
   }
+
+  &--start {
+    ul {
+      justify-content: flex-start;
+    }
+  }
 }
 
 @media screen and (max-width: 575px) {
