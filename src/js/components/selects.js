@@ -46,7 +46,7 @@ if (contactsSelect) {
     const selectedId = e.target.options[e.target.selectedIndex].dataset.tabs;
 
     const tab = document.querySelector('.contacts__tabs li[data-tabs="' + selectedId + '"]');
-
+    tab.click();
     setCenter(tab.dataset.coords);
 
   })

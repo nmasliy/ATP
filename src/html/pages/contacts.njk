@@ -1,0 +1,14 @@
+{% set title = "ATP - Контакты" %}
+
+{% extends "../templates/layouts/layout.njk" %}
+
+{% block head %}
+<script src="https://api-maps.yandex.ru/2.1/?apikey=9ab26e0c-32ac-4011-8bb4-12cd8f01c0a5&lang=ru_RU"
+  type="text/javascript"></script>
+{% endblock head %}
+
+{% block content %}
+
+{% include "../templates/sections/contacts-page.njk" %}
+
+{% endblock content %}
