@@ -152,6 +152,15 @@
   top: 0;
 }
 
+@media screen and (min-width: 1920px) {
+  .catalog {
+    &__categories {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+  }
+}
+
 @media screen and (max-width: $menu-breakpoint) {
   .catalog {
     &__menu {

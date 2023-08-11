@@ -106,6 +106,12 @@
   &__text {
     margin-bottom: 20px;
     text-align: center;
+
+    &--sm {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 450px;
+    }
   }
 
   &__form-item {

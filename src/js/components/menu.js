@@ -57,7 +57,7 @@ function initCityPicker() {
 }
 
 function toggleHeader() {
-
+  if (window.innerWidth < 1200) return;
   if (window.scrollY > 100) {
     header.classList.add('is-fixed');
   } else {

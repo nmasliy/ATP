@@ -95,6 +95,12 @@
   }
 }
 
+@media screen and (min-width: 1920px) {
+  .container--wide {
+    max-width: 1920px;
+  }
+}
+
 @media screen and (max-width: $menu-breakpoint) {
   .page-inner__row {
     grid-template-columns: 200px auto;
@@ -120,12 +126,12 @@
   }
 
   .page-inner {
-    &__row {
-      display: block;
+    .page-menu {
+      display: none;
     }
 
-    &__content {
-      margin-bottom: 40px;
+    &__row {
+      display: block;
     }
   }
 }

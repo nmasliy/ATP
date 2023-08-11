@@ -7,12 +7,6 @@
     background-color: $bg-color;
   }
 
-  &__head {
-    @include grid(3, 10px);
-
-    margin-bottom: 40px;
-  }
-
   &__title {
     margin-bottom: 10px;
   }
@@ -78,6 +72,14 @@
   }
 }
 
+@media screen and (min-width: 1920px) {
+  .categories {
+    &__list {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}
+
 @media screen and (max-width: $menu-breakpoint) {
   .category {
     &__name {
@@ -90,8 +92,7 @@
   }
 
   .categories {
-    &__list,
-    &__head {
+    &__list {
       gap: 24px;
     }
   }
@@ -113,8 +114,7 @@
       grid-column: span 2;
     }
 
-    &__list,
-    &__head {
+    &__list {
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -127,15 +127,6 @@
     &__inner {
       border-radius: 0;
       padding: 0;
-    }
-
-    &__head {
-      display: block;
-      margin-bottom: 16px;
-
-      > div {
-        @include mb(16px);
-      }
     }
 
     &__info {

@@ -1,19 +1,24 @@
 .about {
-  position: relative;
   color: $white-color;
-  background-position: right;
-  background-size: 1080px;
-  background-repeat: no-repeat;
   background-color: $dark-color;
 
-  &::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 1080px;
-    background: linear-gradient(90deg, #151925 0%, rgba(21, 25, 37, 37%) 50%);
+  &__wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1920px;
+    background-position: right;
+    background-size: 1080px;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 1080px;
+      background: linear-gradient(90deg, #151925 0%, rgba(21, 25, 37, 37%) 50%);
+    }
   }
 
   &__inner {
@@ -51,14 +56,30 @@
   }
 }
 
+@media screen and (min-width: 1921px) {
+  .about__wrapper {
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 400px;
+      background: linear-gradient(90deg, rgba(#151925, 0)  0%, #151925 100%);
+    }
+  }
+}
+
 @media screen and (max-width: $menu-breakpoint) {
   .about {
-    background-size: cover;
-
     &::before {
       width: 100%;
       background: $dark-color;
       opacity: 0.8;
+    }
+
+    &__wrapper {
+      background-size: cover;
     }
 
     &__inner {
