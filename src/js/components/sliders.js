@@ -82,6 +82,9 @@ productsSliders.forEach(el => {
       // when window width is >= 1201
       1201: {
         slidesPerView: 4,
+      },
+      1920: {
+        slidesPerView: 6,
       }
     }
   })
